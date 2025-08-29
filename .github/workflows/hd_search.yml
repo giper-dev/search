@@ -19,7 +19,7 @@ jobs:
         package: 'hd/search'
         modules: 'app'
     
-    - uses: hyoo-ru/gh-deploy@mater
+    - uses: hyoo-ru/gh-deploy@v4.4.1
       if: github.ref == 'refs/heads/master'
       with:
         site-directory: 'hd/search/app/-'
