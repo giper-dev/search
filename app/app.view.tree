@@ -1,4 +1,4 @@
-$hyoo_search_app $mol_book2
+$hd_search_app $mol_book2
 	plugins /
 		<= Theme $mol_theme_auto
 	Placeholder null
@@ -72,7 +72,7 @@ $hyoo_search_app $mol_book2
 					dom_name \script
 					attr *
 						src \https://www.gstatic.com/prose/brand.js
-						targetId \$hyoo_search_app.Root(0).Attribution()
+						targetId \$hd_search_app.Root(0).Attribution()
 			foot <= searcher_links /
 		<= Settings $mol_page
 			title @ \Settings
@@ -88,7 +88,7 @@ $hyoo_search_app $mol_book2
 					sub /
 						<= Info_icon $mol_icon_information_slab_circle_outline
 				<= Sources $mol_link_source
-					uri \https://github.com/hyoo-ru/search.hyoo.ru
+					uri \https://github.com/hd4ru/search
 				<= Settings_close $mol_link
 					arg * settings null
 					sub /

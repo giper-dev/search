@@ -2,7 +2,7 @@ namespace $.$$ {
 	
 	const Words = $mol_regexp.repeat_greedy( $mol_regexp.unicode_only( 'Alphabetic' ), 1 )
 	
-	export class $hyoo_search_app extends $.$hyoo_search_app {
+	export class $hd_search_app extends $.$hd_search_app {
 		
 		@ $mol_memo.field
 		get $() {
@@ -138,7 +138,7 @@ namespace $.$$ {
 		
 		@ $mol_mem
 		error() {
-			return this.$.$hyoo_search_api.error()
+			return this.$.$hd_search_api.error()
 		}
 		
 		@ $mol_mem
@@ -156,7 +156,7 @@ namespace $.$$ {
 				'Image'
 			].includes( this.type() ) ? 'image' : 'web'
 			
-			return $mol_wire_sync( this.$.$hyoo_search_api.type( type ) )
+			return $mol_wire_sync( this.$.$hd_search_api.type( type ) )
 		
 		}
 		

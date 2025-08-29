@@ -1,4 +1,4 @@
-name: Deploy
+name: $hd_search
 
 on:
   workflow_dispatch:
@@ -17,7 +17,7 @@ jobs:
       uses: hyoo-ru/mam_build@master2
       with:
         token: ${{ secrets.GH_PAT }}
-        package: 'hyoo/search'
+        package: 'hd/search'
         modules: 'app'
     
     - name: Deploy on GitHub Pages
@@ -25,4 +25,4 @@ jobs:
       uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
       with:
         repo-token: ${{ secrets.GH_PAT }}
-        site-directory: 'hyoo/search/app/-'
+        site-directory: 'hd/search/app/-'

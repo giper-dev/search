@@ -1,6 +1,6 @@
-# $hyoo_search
+# $hd_search
 
-Best frontend for global web search
+> Best frontend for global web search without ads but with blacklist
 
 # Key features
 
@@ -26,7 +26,7 @@ Best frontend for global web search
 - Right click on url-bar.
 - Click to "Manage Search Engines".
 - Click to "Add new one".
-- Fill URL field with `https://search.hyoo.ru/#!query=%s` and other as you wish.
+- Fill URL field with `https://search.hd4.ru/#!query=%s` and other as you wish.
 - Submit form.
 - Find added engine in list and open menu at right side.
 - Click to "Set as default".
@@ -34,7 +34,7 @@ Best frontend for global web search
 ## Firefox
 
 - Click to url-bar.
-- Click to "Add $hyoo_search".
+- Click to "Add $hd_search".
 - Click to "Change search settings at right side".
 - Find default search select and change it.
 

@@ -1,4 +1,4 @@
 include \/mol/offline/install
 
-deploy \/hyoo/search/logo/logo.svg
-deploy \/hyoo/search/plugin/plugin.xml
+deploy \/hd/search/logo/
+deploy \/hd/search/plugin/

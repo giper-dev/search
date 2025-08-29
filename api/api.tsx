@@ -1,13 +1,13 @@
 /** @jsx $mol_jsx */
 namespace $ {
 	
-	export interface $hyoo_search_api_external {
+	export interface $hd_search_api_external {
 		execute: ( query: string )=> void
 	}
 	
 	declare namespace google.search.cse.element {
 		
-		function getElement( gname: string ): $hyoo_search_api_external
+		function getElement( gname: string ): $hd_search_api_external
 		
 		function render( options: {
 			div: Element
@@ -41,7 +41,7 @@ namespace $ {
 		visibleUrl: $mol_data_string,
 	}) )
 	
-	export class $hyoo_search_api extends $mol_object2 {
+	export class $hd_search_api extends $mol_object2 {
 		
 		@ $mol_mem_key
 		static type( type: 'web' | 'image' ) {
@@ -71,7 +71,7 @@ namespace $ {
 				
 				if( results.length && !Object.keys( results[0] ).length ) results = []
 				
-				const future = $hyoo_search_api.type( type ).future( query )
+				const future = $hd_search_api.type( type ).future( query )
 				
 				try {
 					future.promise.done( Results( results ) )
@@ -95,8 +95,8 @@ namespace $ {
 									const error = args[0].error
 									if( error ) {
 										setTimeout( ()=> {
-											$hyoo_search_api.error(
-												$hyoo_search_api.output().querySelector( '#recaptcha-wrapper' )
+											$hd_search_api.error(
+												$hd_search_api.output().querySelector( '#recaptcha-wrapper' )
 											)
 										} )
 									}
@@ -138,11 +138,11 @@ namespace $ {
 		@ $mol_memo.method
 		async backend() {
 			
-			const backend = await $hyoo_search_api.backend()
+			const backend = await $hd_search_api.backend()
 			const gname = this.toString()
 					
 			backend.render({
-				div: $hyoo_search_api.output(),
+				div: $hd_search_api.output(),
 				tag: 'search',
 				gname,
 				attributes: {
