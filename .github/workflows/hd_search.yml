@@ -13,15 +13,13 @@ jobs:
     
     steps:
     
-    - name: Build app
-      uses: hyoo-ru/mam_build@master2
+    - uses: hyoo-ru/mam_build@master2
       with:
         token: ${{ secrets.GH_PAT }}
         package: 'hd/search'
         modules: 'app'
     
-    - name: Deploy on GitHub Pages
+    - uses: hyoo-ru/gh-deploy@mater
       if: github.ref == 'refs/heads/master'
-      uses: hyoo-ru/hg-deploy@master
       with:
         site-directory: 'hd/search/app/-'
