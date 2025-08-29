@@ -1,4 +1,4 @@
-# $hd_search
+# Hyper Search
 
 > Web search with blacklist and without ads
 
