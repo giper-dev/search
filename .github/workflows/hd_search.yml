@@ -22,7 +22,6 @@ jobs:
     
     - name: Deploy on GitHub Pages
       if: github.ref == 'refs/heads/master'
-      uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
+      uses: hyoo-ru/hg-deploy@master
       with:
-        repo-token: ${{ secrets.GH_PAT }}
         site-directory: 'hd/search/app/-'
