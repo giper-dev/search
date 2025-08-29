@@ -1,6 +1,6 @@
 # $hd_search
 
-> Best frontend for global web search without ads but with blacklist
+> Web search with blacklist and without ads
 
 # Key features
 
