@@ -9803,7 +9803,7 @@ var $;
 		}
 		searchers(next){
 			if(next !== undefined) return next;
-			return "https://google.com/search?udm=14&q=\nhttps://yandex.ru/search/?text=\nhttps://duckduckgo.com/?q=\nhttps://searx.tuxcloud.net/search?q=";
+			return "https://google.com/search?udm=14&q=\nhttps://yandex.ru/search/?text=\nhttps://duckduckgo.com/?q=\nhttps://searx.tuxcloud.net/search?q=\nhttps://bot.hd4.ru/#prompt=";
 		}
 		Searchers(){
 			const obj = new this.$.$mol_textarea();
@@ -9819,7 +9819,7 @@ var $;
 		}
 		blacklist(next){
 			if(next !== undefined) return next;
-			return "pinterest.com\nitnan.ru";
+			return "itnan.ru";
 		}
 		Blacklist(){
 			const obj = new this.$.$mol_textarea();
