@@ -2,3 +2,4 @@ include \/mol/offline/install
 
 deploy \/hd/search/logo/
 deploy \/hd/search/plugin/
+deploy \/hd/search/app/manifest.json
