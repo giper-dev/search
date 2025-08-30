@@ -2359,22 +2359,31 @@ declare namespace $ {
 
 declare namespace $ {
 
-	export class $mol_icon_bullseye extends $mol_icon {
+	export class $mol_icon_minus extends $mol_icon {
 		path( ): string
 	}
 	
 }
 
-//# sourceMappingURL=bullseye.view.tree.d.ts.map
+//# sourceMappingURL=minus.view.tree.d.ts.map
 declare namespace $ {
 
-	export class $mol_icon_bullseye_arrow extends $mol_icon {
+	export class $mol_icon_minus_circle extends $mol_icon {
 		path( ): string
 	}
 	
 }
 
-//# sourceMappingURL=arrow.view.tree.d.ts.map
+//# sourceMappingURL=circle.view.tree.d.ts.map
+declare namespace $ {
+
+	export class $mol_icon_minus_circle_outline extends $mol_icon {
+		path( ): string
+	}
+	
+}
+
+//# sourceMappingURL=outline.view.tree.d.ts.map
 declare namespace $ {
 }
 
@@ -2413,44 +2422,6 @@ declare namespace $.$$ {
     }
 }
 
-declare namespace $ {
-}
-
-declare namespace $ {
-
-	export class $mol_check_icon extends $mol_check {
-	}
-	
-}
-
-//# sourceMappingURL=icon.view.tree.d.ts.map
-declare namespace $ {
-
-	export class $mol_icon_minus extends $mol_icon {
-		path( ): string
-	}
-	
-}
-
-//# sourceMappingURL=minus.view.tree.d.ts.map
-declare namespace $ {
-
-	export class $mol_icon_minus_circle extends $mol_icon {
-		path( ): string
-	}
-	
-}
-
-//# sourceMappingURL=circle.view.tree.d.ts.map
-declare namespace $ {
-
-	export class $mol_icon_minus_circle_outline extends $mol_icon {
-		path( ): string
-	}
-	
-}
-
-//# sourceMappingURL=outline.view.tree.d.ts.map
 declare namespace $ {
 
 	type $mol_check__minimal_width_mol_pick_1 = $mol_type_enforce<
@@ -2783,6 +2754,35 @@ declare namespace $.$$ {
 declare namespace $.$$ {
 }
 
+declare namespace $ {
+
+	export class $mol_icon_bullseye extends $mol_icon {
+		path( ): string
+	}
+	
+}
+
+//# sourceMappingURL=bullseye.view.tree.d.ts.map
+declare namespace $ {
+
+	export class $mol_icon_bullseye_arrow extends $mol_icon {
+		path( ): string
+	}
+	
+}
+
+//# sourceMappingURL=arrow.view.tree.d.ts.map
+declare namespace $ {
+}
+
+declare namespace $ {
+
+	export class $mol_check_icon extends $mol_check {
+	}
+	
+}
+
+//# sourceMappingURL=icon.view.tree.d.ts.map
 declare namespace $ {
 
 	export class $mol_icon_settings extends $mol_icon {
@@ -4121,50 +4121,50 @@ declare namespace $ {
 		,
 		ReturnType< $mol_search['submit'] >
 	>
-	type $mol_check_icon__checked_hd_search_app_4 = $mol_type_enforce<
-		ReturnType< $hd_search_app['exact'] >
-		,
-		ReturnType< $mol_check_icon['checked'] >
-	>
-	type $mol_check_icon__Icon_hd_search_app_5 = $mol_type_enforce<
-		ReturnType< $hd_search_app['Exact_icon'] >
-		,
-		ReturnType< $mol_check_icon['Icon'] >
-	>
-	type $mol_check_icon__hint_hd_search_app_6 = $mol_type_enforce<
-		string
-		,
-		ReturnType< $mol_check_icon['hint'] >
-	>
-	type $mol_select_list__value_hd_search_app_7 = $mol_type_enforce<
+	type $mol_select_list__value_hd_search_app_4 = $mol_type_enforce<
 		ReturnType< $hd_search_app['exclude'] >
 		,
 		ReturnType< $mol_select_list['value'] >
 	>
-	type $mol_select_list__options_hd_search_app_8 = $mol_type_enforce<
+	type $mol_select_list__options_hd_search_app_5 = $mol_type_enforce<
 		ReturnType< $hd_search_app['exclude_options'] >
 		,
 		ReturnType< $mol_select_list['options'] >
 	>
-	type $mol_select_list__badge_title_hd_search_app_9 = $mol_type_enforce<
+	type $mol_select_list__badge_title_hd_search_app_6 = $mol_type_enforce<
 		ReturnType< $hd_search_app['exclude_badge_title'] >
 		,
 		ReturnType< $mol_select_list['badge_title'] >
 	>
-	type $mol_select_list__pick_hint_hd_search_app_10 = $mol_type_enforce<
+	type $mol_select_list__pick_hint_hd_search_app_7 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_select_list['pick_hint'] >
 	>
-	type $mol_select_list__pick_enabled_hd_search_app_11 = $mol_type_enforce<
+	type $mol_select_list__pick_enabled_hd_search_app_8 = $mol_type_enforce<
 		boolean
 		,
 		ReturnType< $mol_select_list['pick_enabled'] >
 	>
-	type $mol_select_list__Pick_icon_hd_search_app_12 = $mol_type_enforce<
+	type $mol_select_list__Pick_icon_hd_search_app_9 = $mol_type_enforce<
 		ReturnType< $hd_search_app['Exclude_icon'] >
 		,
 		ReturnType< $mol_select_list['Pick_icon'] >
+	>
+	type $mol_check_icon__checked_hd_search_app_10 = $mol_type_enforce<
+		ReturnType< $hd_search_app['exact'] >
+		,
+		ReturnType< $mol_check_icon['checked'] >
+	>
+	type $mol_check_icon__Icon_hd_search_app_11 = $mol_type_enforce<
+		ReturnType< $hd_search_app['Exact_icon'] >
+		,
+		ReturnType< $mol_check_icon['Icon'] >
+	>
+	type $mol_check_icon__hint_hd_search_app_12 = $mol_type_enforce<
+		string
+		,
+		ReturnType< $mol_check_icon['hint'] >
 	>
 	type $mol_select__value_hd_search_app_13 = $mol_type_enforce<
 		ReturnType< $hd_search_app['where'] >
@@ -4583,14 +4583,14 @@ declare namespace $ {
 		submit( next?: any ): any
 		main_bring( ): ReturnType< ReturnType< $hd_search_app['Query'] >['bring'] >
 		Query( ): $mol_search
-		exact( next?: boolean ): boolean
-		Exact_icon( ): $mol_icon_bullseye_arrow
-		Exact( ): $mol_check_icon
 		exclude( next?: readonly(string)[] ): readonly(string)[]
 		exclude_options( ): readonly(string)[]
 		exclude_badge_title( id: any): string
 		Exclude_icon( ): $mol_icon_minus_circle_outline
 		Exclude( ): $mol_select_list
+		exact( next?: boolean ): boolean
+		Exact_icon( ): $mol_icon_bullseye_arrow
+		Exact( ): $mol_check_icon
 		where( next?: string ): string
 		Where( ): $mol_select
 		type( next?: string ): string

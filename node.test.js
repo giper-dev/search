@@ -7138,9 +7138,9 @@ var $;
 })($ || ($ = {}));
 
 ;
-	($.$mol_icon_bullseye) = class $mol_icon_bullseye extends ($.$mol_icon) {
+	($.$mol_icon_minus) = class $mol_icon_minus extends ($.$mol_icon) {
 		path(){
-			return "M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10Z";
+			return "M19,13H5V11H19V13Z";
 		}
 	};
 
@@ -7149,9 +7149,20 @@ var $;
 "use strict";
 
 ;
-	($.$mol_icon_bullseye_arrow) = class $mol_icon_bullseye_arrow extends ($.$mol_icon) {
+	($.$mol_icon_minus_circle) = class $mol_icon_minus_circle extends ($.$mol_icon) {
 		path(){
-			return "M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,10.84 21.79,9.69 21.39,8.61L19.79,10.21C19.93,10.8 20,11.4 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4C12.6,4 13.2,4.07 13.79,4.21L15.4,2.6C14.31,2.21 13.16,2 12,2M19,2L15,6V7.5L12.45,10.05C12.3,10 12.15,10 12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12C14,11.85 14,11.7 13.95,11.55L16.5,9H18L22,5H19V2M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12H16A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8V6Z";
+			return "M17,13H7V11H17M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z";
+		}
+	};
+
+
+;
+"use strict";
+
+;
+	($.$mol_icon_minus_circle_outline) = class $mol_icon_minus_circle_outline extends ($.$mol_icon) {
+		path(){
+			return "M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M7,13H17V11H7";
 		}
 	};
 
@@ -7241,53 +7252,6 @@ var $;
         $$.$mol_check = $mol_check;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
-
-;
-	($.$mol_check_icon) = class $mol_check_icon extends ($.$mol_check) {};
-
-
-;
-"use strict";
-var $;
-(function ($) {
-    $mol_style_attach("mol/check/icon/icon.view.css", "[mol_check_icon]:where([mol_check_checked]) {\n\tcolor: var(--mol_theme_current);\n}\n");
-})($ || ($ = {}));
-
-;
-"use strict";
-
-;
-	($.$mol_icon_minus) = class $mol_icon_minus extends ($.$mol_icon) {
-		path(){
-			return "M19,13H5V11H19V13Z";
-		}
-	};
-
-
-;
-"use strict";
-
-;
-	($.$mol_icon_minus_circle) = class $mol_icon_minus_circle extends ($.$mol_icon) {
-		path(){
-			return "M17,13H7V11H17M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z";
-		}
-	};
-
-
-;
-"use strict";
-
-;
-	($.$mol_icon_minus_circle_outline) = class $mol_icon_minus_circle_outline extends ($.$mol_icon) {
-		path(){
-			return "M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M7,13H17V11H7";
-		}
-	};
-
-
-;
-"use strict";
 
 ;
 	($.$mol_pick) = class $mol_pick extends ($.$mol_pop) {
@@ -7820,6 +7784,42 @@ var $;
         });
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
+
+;
+	($.$mol_icon_bullseye) = class $mol_icon_bullseye extends ($.$mol_icon) {
+		path(){
+			return "M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10Z";
+		}
+	};
+
+
+;
+"use strict";
+
+;
+	($.$mol_icon_bullseye_arrow) = class $mol_icon_bullseye_arrow extends ($.$mol_icon) {
+		path(){
+			return "M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,10.84 21.79,9.69 21.39,8.61L19.79,10.21C19.93,10.8 20,11.4 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4C12.6,4 13.2,4.07 13.79,4.21L15.4,2.6C14.31,2.21 13.16,2 12,2M19,2L15,6V7.5L12.45,10.05C12.3,10 12.15,10 12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12C14,11.85 14,11.7 13.95,11.55L16.5,9H18L22,5H19V2M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12H16A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8V6Z";
+		}
+	};
+
+
+;
+"use strict";
+
+;
+	($.$mol_check_icon) = class $mol_check_icon extends ($.$mol_check) {};
+
+
+;
+"use strict";
+var $;
+(function ($) {
+    $mol_style_attach("mol/check/icon/icon.view.css", "[mol_check_icon]:where([mol_check_checked]) {\n\tcolor: var(--mol_theme_current);\n}\n");
+})($ || ($ = {}));
+
+;
+"use strict";
 
 ;
 	($.$mol_icon_settings) = class $mol_icon_settings extends ($.$mol_icon) {
@@ -10055,21 +10055,6 @@ var $;
 			(obj.submit) = (next) => ((this.submit(next)));
 			return obj;
 		}
-		exact(next){
-			if(next !== undefined) return next;
-			return false;
-		}
-		Exact_icon(){
-			const obj = new this.$.$mol_icon_bullseye_arrow();
-			return obj;
-		}
-		Exact(){
-			const obj = new this.$.$mol_check_icon();
-			(obj.checked) = (next) => ((this.exact(next)));
-			(obj.Icon) = () => ((this.Exact_icon()));
-			(obj.hint) = () => ((this.$.$mol_locale.text("$hd_search_app_Exact_hint")));
-			return obj;
-		}
 		exclude(next){
 			if(next !== undefined) return next;
 			return [];
@@ -10092,6 +10077,21 @@ var $;
 			(obj.pick_hint) = () => ((this.$.$mol_locale.text("$hd_search_app_Exclude_pick_hint")));
 			(obj.pick_enabled) = () => (true);
 			(obj.Pick_icon) = () => ((this.Exclude_icon()));
+			return obj;
+		}
+		exact(next){
+			if(next !== undefined) return next;
+			return false;
+		}
+		Exact_icon(){
+			const obj = new this.$.$mol_icon_bullseye_arrow();
+			return obj;
+		}
+		Exact(){
+			const obj = new this.$.$mol_check_icon();
+			(obj.checked) = (next) => ((this.exact(next)));
+			(obj.Icon) = () => ((this.Exact_icon()));
+			(obj.hint) = () => ((this.$.$mol_locale.text("$hd_search_app_Exact_hint")));
 			return obj;
 		}
 		where(next){
@@ -10208,8 +10208,8 @@ var $;
 			(obj.bring) = () => ((this.main_bring()));
 			(obj.Title) = () => ((this.Query()));
 			(obj.tools) = () => ([
-				(this.Exact()), 
 				(this.Exclude()), 
+				(this.Exact()), 
 				(this.Where()), 
 				(this.Type()), 
 				(this.Settings_open())
@@ -10499,12 +10499,12 @@ var $;
 	($mol_mem(($.$hd_search_app.prototype), "query"));
 	($mol_mem(($.$hd_search_app.prototype), "submit"));
 	($mol_mem(($.$hd_search_app.prototype), "Query"));
-	($mol_mem(($.$hd_search_app.prototype), "exact"));
-	($mol_mem(($.$hd_search_app.prototype), "Exact_icon"));
-	($mol_mem(($.$hd_search_app.prototype), "Exact"));
 	($mol_mem(($.$hd_search_app.prototype), "exclude"));
 	($mol_mem(($.$hd_search_app.prototype), "Exclude_icon"));
 	($mol_mem(($.$hd_search_app.prototype), "Exclude"));
+	($mol_mem(($.$hd_search_app.prototype), "exact"));
+	($mol_mem(($.$hd_search_app.prototype), "Exact_icon"));
+	($mol_mem(($.$hd_search_app.prototype), "Exact"));
 	($mol_mem(($.$hd_search_app.prototype), "where"));
 	($mol_mem(($.$hd_search_app.prototype), "Where"));
 	($mol_mem(($.$hd_search_app.prototype), "type"));
