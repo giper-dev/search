@@ -12,6 +12,10 @@
 	flex: 1 0 40rem;
 }
 
+[hd_search_app_main_foot] {
+	justify-content: space-evenly;
+}
+
 [hd_search_app_sideview] {
 	flex: 10000 0 40rem;
 	box-shadow: 0 0 0 1px var(--mol_theme_line);
