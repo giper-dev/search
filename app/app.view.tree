@@ -5,11 +5,12 @@ $hd_search_app $mol_book2
 	query_results?next \
 	title_suffix @ \Hyper Search
 	pages /
+		<= Space $hd_space_frame
 		<= Main $mol_page
 			title <= query
 			bring <= main_bring
 			Title <= Query $mol_search
-				hint @ \Search..
+				hint @ \Hyper Search..
 				query?val <=> query?val \
 				submit?event <=> submit?event null
 				bring => main_bring

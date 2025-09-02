@@ -119,6 +119,7 @@ namespace $.$$ {
 		@ $mol_mem
 		pages() {
 			return [
+				this.Space(),
 				this.Main(),
 				... this.settings() ? [ this.Settings() ] : [],
 				... this.sideview() ? [ this.Sideview( this.sideview() ) ] : [],
