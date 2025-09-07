@@ -1,11 +1,11 @@
-$hd_search_app $mol_book2
+$gd_search_app $mol_book2
 	plugins /
 		<= Theme $mol_theme_auto
 	Placeholder null
 	query_results?next \
 	title_suffix @ \Hyper Search
 	pages /
-		<= Space $hd_space_frame
+		<= Space $gd_web_frame
 		<= Main $mol_page
 			title <= query
 			bring <= main_bring
@@ -73,7 +73,7 @@ $hd_search_app $mol_book2
 					dom_name \script
 					attr *
 						src \https://www.gstatic.com/prose/brand.js
-						targetId \$hd_search_app.Root(0).Attribution()
+						targetId \$gd_search_app.Root(0).Attribution()
 			foot <= searcher_links /
 		<= Settings $mol_page
 			title @ \Settings
@@ -81,7 +81,7 @@ $hd_search_app $mol_book2
 				<= Support $mol_link_donate
 					uri \https://boosty.to/hyoo
 				<= Donate $mol_link_support
-					uri \https://t.me/hd4ru/72
+					uri \https://t.me/giper-dev/72
 				<= Lights $mol_lights_toggle
 				<= Info $mol_link
 					hint @ \Article about
@@ -89,7 +89,7 @@ $hd_search_app $mol_book2
 					sub /
 						<= Info_icon $mol_icon_information_slab_circle_outline
 				<= Sources $mol_link_source
-					uri \https://github.com/hd4ru/search
+					uri \https://github.com/giper-dev/search
 				<= Settings_close $mol_link
 					arg * settings null
 					sub /
@@ -106,7 +106,7 @@ $hd_search_app $mol_book2
 									\https://yandex.ru/search/?text=
 									\https://duckduckgo.com/?q=
 									\https://searx.tuxcloud.net/search?q=
-									\https://bot.hd4.ru/#prompt=
+									\https://bot.giper.dev/#prompt=
 						<= Blacklist_field $mol_form_field
 							name @ \Domain Black List
 							Content <= Blacklist $mol_textarea

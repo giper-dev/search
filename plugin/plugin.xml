@@ -6,10 +6,10 @@
 	<LongName>Hyper Search</LongName>
 	<Description>Web search with blacklist and without ads</Description>
 	<InputEncoding>UTF-8</InputEncoding>
-	<Image width="16" height="16" type="image/svg+xml">../../../hd/search/logo/logo.svg</Image>
-	<Url type="text/html" template="https://search.hd4.ru/#!query={searchTerms}" />
+	<Image width="16" height="16" type="image/svg+xml">../../../gd/search/logo/logo.svg</Image>
+	<Url type="text/html" template="https://search.giper.dev/#!query={searchTerms}" />
 	<Url type="application/x-suggestions+json" template="https://suggest.yandex.ru/suggest-ff.cgi?part={searchTerms}"/>
 	<Query role="example" searchTerms="$mol" />
-	<Contact>search@hd4.ru</Contact>
-	<Developer>hd4.ru</Developer>
+	<Contact>search@giper.dev</Contact>
+	<Developer>giper.dev</Developer>
 </OpenSearchDescription>

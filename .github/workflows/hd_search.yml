@@ -1,4 +1,4 @@
-name: $hd_search
+name: $gd_search
 
 on:
   workflow_dispatch:
@@ -16,10 +16,10 @@ jobs:
     - uses: hyoo-ru/mam_build@master2
       with:
         token: ${{ secrets.GH_PAT }}
-        package: 'hd/search'
+        package: 'gd/search'
         modules: 'app'
     
     - uses: hyoo-ru/gh-deploy@v4.4.1
       if: github.ref == 'refs/heads/master'
       with:
-        folder: 'hd/search/app/-'
+        folder: 'gd/search/app/-'

@@ -1,5 +1,5 @@
 include \/mol/offline/install
 
-deploy \/hd/search/logo/
-deploy \/hd/search/plugin/
-deploy \/hd/search/app/manifest.json
+deploy \/gd/search/logo/
+deploy \/gd/search/plugin/
+deploy \/gd/search/app/manifest.json

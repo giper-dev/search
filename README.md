@@ -26,7 +26,7 @@
 - Right click on url-bar.
 - Click to "Manage Search Engines".
 - Click to "Add new one".
-- Fill URL field with `https://search.hd4.ru/#!query=%s` and other as you wish.
+- Fill URL field with `https://search.giper.dev/#!query=%s` and other as you wish.
 - Submit form.
 - Find added engine in list and open menu at right side.
 - Click to "Set as default".
@@ -34,7 +34,7 @@
 ## Firefox
 
 - Click to url-bar.
-- Click to "Add $hd_search".
+- Click to "Add $gd_search".
 - Click to "Change search settings at right side".
 - Find default search select and change it.
 
