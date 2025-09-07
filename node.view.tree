@@ -693,14 +693,14 @@ $gd_search_app $mol_book2
 		<= Theme $mol_theme_auto
 	Placeholder null
 	query_results?next \
-	title_suffix @ \Hyper Search
+	title_suffix @ \Giper Search
 	pages /
 		<= Space $gd_web_frame
 		<= Main $mol_page
 			title <= query
 			bring <= main_bring
 			Title <= Query $mol_search
-				hint @ \Hyper Search..
+				hint @ \Giper Search..
 				query?val <=> query?val \
 				submit?event <=> submit?event null
 				bring => main_bring
