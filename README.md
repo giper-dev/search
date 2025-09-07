@@ -1,4 +1,4 @@
-# Hyper Search
+# Giper Search
 
 > Web search with blacklist and without ads
 
