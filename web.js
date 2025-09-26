@@ -10149,7 +10149,7 @@ var $;
 		}
 		blacklist(next){
 			if(next !== undefined) return next;
-			return "itnan.ru";
+			return "";
 		}
 		Blacklist(){
 			const obj = new this.$.$mol_textarea();
