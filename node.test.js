@@ -10590,7 +10590,7 @@ var $;
 		}
 		searchers(next){
 			if(next !== undefined) return next;
-			return "https://google.com/search?udm=14&q=\nhttps://yandex.ru/search/?text=\nhttps://duckduckgo.com/?q=\nhttps://searx.tuxcloud.net/search?q=\nhttps://bot.giper.dev/#prompt=";
+			return "https://google.com/search?udm=14&q=\nhttps://yandex.ru/search/?text=\nhttps://duckduckgo.com/?q=\nhttps://searx.tuxcloud.net/search?q=";
 		}
 		Searchers(){
 			const obj = new this.$.$mol_textarea();
