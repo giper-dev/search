@@ -1642,6 +1642,7 @@ declare namespace $ {
 
 	export class $gd_web_frame extends $mol_frame {
 		uri( ): string
+		query( ): string
 	}
 	
 }
@@ -4169,77 +4170,82 @@ declare namespace $ {
 
 declare namespace $ {
 
-	type $mol_search__hint_gd_search_app_1 = $mol_type_enforce<
+	type $gd_web_frame__query_gd_search_app_1 = $mol_type_enforce<
+		ReturnType< $gd_search_app['query'] >
+		,
+		ReturnType< $gd_web_frame['query'] >
+	>
+	type $mol_search__hint_gd_search_app_2 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_search['hint'] >
 	>
-	type $mol_search__query_gd_search_app_2 = $mol_type_enforce<
+	type $mol_search__query_gd_search_app_3 = $mol_type_enforce<
 		ReturnType< $gd_search_app['query'] >
 		,
 		ReturnType< $mol_search['query'] >
 	>
-	type $mol_search__submit_gd_search_app_3 = $mol_type_enforce<
+	type $mol_search__submit_gd_search_app_4 = $mol_type_enforce<
 		ReturnType< $gd_search_app['submit'] >
 		,
 		ReturnType< $mol_search['submit'] >
 	>
-	type $mol_select_list__value_gd_search_app_4 = $mol_type_enforce<
+	type $mol_select_list__value_gd_search_app_5 = $mol_type_enforce<
 		ReturnType< $gd_search_app['exclude'] >
 		,
 		ReturnType< $mol_select_list['value'] >
 	>
-	type $mol_select_list__options_gd_search_app_5 = $mol_type_enforce<
+	type $mol_select_list__options_gd_search_app_6 = $mol_type_enforce<
 		ReturnType< $gd_search_app['exclude_options'] >
 		,
 		ReturnType< $mol_select_list['options'] >
 	>
-	type $mol_select_list__badge_title_gd_search_app_6 = $mol_type_enforce<
+	type $mol_select_list__badge_title_gd_search_app_7 = $mol_type_enforce<
 		ReturnType< $gd_search_app['exclude_badge_title'] >
 		,
 		ReturnType< $mol_select_list['badge_title'] >
 	>
-	type $mol_select_list__pick_hint_gd_search_app_7 = $mol_type_enforce<
+	type $mol_select_list__pick_hint_gd_search_app_8 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_select_list['pick_hint'] >
 	>
-	type $mol_select_list__pick_enabled_gd_search_app_8 = $mol_type_enforce<
+	type $mol_select_list__pick_enabled_gd_search_app_9 = $mol_type_enforce<
 		boolean
 		,
 		ReturnType< $mol_select_list['pick_enabled'] >
 	>
-	type $mol_select_list__Pick_icon_gd_search_app_9 = $mol_type_enforce<
+	type $mol_select_list__Pick_icon_gd_search_app_10 = $mol_type_enforce<
 		ReturnType< $gd_search_app['Exclude_icon'] >
 		,
 		ReturnType< $mol_select_list['Pick_icon'] >
 	>
-	type $mol_check_icon__checked_gd_search_app_10 = $mol_type_enforce<
+	type $mol_check_icon__checked_gd_search_app_11 = $mol_type_enforce<
 		ReturnType< $gd_search_app['exact'] >
 		,
 		ReturnType< $mol_check_icon['checked'] >
 	>
-	type $mol_check_icon__Icon_gd_search_app_11 = $mol_type_enforce<
+	type $mol_check_icon__Icon_gd_search_app_12 = $mol_type_enforce<
 		ReturnType< $gd_search_app['Exact_icon'] >
 		,
 		ReturnType< $mol_check_icon['Icon'] >
 	>
-	type $mol_check_icon__hint_gd_search_app_12 = $mol_type_enforce<
+	type $mol_check_icon__hint_gd_search_app_13 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_check_icon['hint'] >
 	>
-	type $mol_select__value_gd_search_app_13 = $mol_type_enforce<
+	type $mol_select__value_gd_search_app_14 = $mol_type_enforce<
 		ReturnType< $gd_search_app['where'] >
 		,
 		ReturnType< $mol_select['value'] >
 	>
-	type $mol_select__Filter_gd_search_app_14 = $mol_type_enforce<
+	type $mol_select__Filter_gd_search_app_15 = $mol_type_enforce<
 		any
 		,
 		ReturnType< $mol_select['Filter'] >
 	>
-	type $mol_select__dictionary_gd_search_app_15 = $mol_type_enforce<
+	type $mol_select__dictionary_gd_search_app_16 = $mol_type_enforce<
 		({ 
 			'anywhere': string,
 			'allintitle': string,
@@ -4250,69 +4256,69 @@ declare namespace $ {
 		,
 		ReturnType< $mol_select['dictionary'] >
 	>
-	type $mol_select__value_gd_search_app_16 = $mol_type_enforce<
+	type $mol_select__value_gd_search_app_17 = $mol_type_enforce<
 		ReturnType< $gd_search_app['type'] >
 		,
 		ReturnType< $mol_select['value'] >
 	>
-	type $mol_select__Filter_gd_search_app_17 = $mol_type_enforce<
+	type $mol_select__Filter_gd_search_app_18 = $mol_type_enforce<
 		any
 		,
 		ReturnType< $mol_select['Filter'] >
 	>
-	type $mol_select__options_gd_search_app_18 = $mol_type_enforce<
+	type $mol_select__options_gd_search_app_19 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_select['options'] >
 	>
-	type $mol_link__arg_gd_search_app_19 = $mol_type_enforce<
+	type $mol_link__arg_gd_search_app_20 = $mol_type_enforce<
 		({ 
 			'settings': string,
 		}) 
 		,
 		ReturnType< $mol_link['arg'] >
 	>
-	type $mol_link__sub_gd_search_app_20 = $mol_type_enforce<
+	type $mol_link__sub_gd_search_app_21 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_link['sub'] >
-	>
-	type $mol_view__sub_gd_search_app_21 = $mol_type_enforce<
-		readonly(any)[]
-		,
-		ReturnType< $mol_view['sub'] >
 	>
 	type $mol_view__sub_gd_search_app_22 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_view['sub'] >
 	>
-	type $mol_list__rows_gd_search_app_23 = $mol_type_enforce<
+	type $mol_view__sub_gd_search_app_23 = $mol_type_enforce<
+		readonly(any)[]
+		,
+		ReturnType< $mol_view['sub'] >
+	>
+	type $mol_list__rows_gd_search_app_24 = $mol_type_enforce<
 		ReturnType< $gd_search_app['result_list'] >
 		,
 		ReturnType< $mol_list['rows'] >
 	>
-	type $mol_list__Empty_gd_search_app_24 = $mol_type_enforce<
+	type $mol_list__Empty_gd_search_app_25 = $mol_type_enforce<
 		ReturnType< $gd_search_app['Result_list_empty'] >
 		,
 		ReturnType< $mol_list['Empty'] >
 	>
-	type $mol_view__dom_name_gd_search_app_25 = $mol_type_enforce<
+	type $mol_view__dom_name_gd_search_app_26 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_view['dom_name'] >
 	>
-	type $mol_view__minimal_height_gd_search_app_26 = $mol_type_enforce<
+	type $mol_view__minimal_height_gd_search_app_27 = $mol_type_enforce<
 		number
 		,
 		ReturnType< $mol_view['minimal_height'] >
 	>
-	type $mol_view__dom_name_gd_search_app_27 = $mol_type_enforce<
+	type $mol_view__dom_name_gd_search_app_28 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_view['dom_name'] >
 	>
-	type $mol_view__attr_gd_search_app_28 = $mol_type_enforce<
+	type $mol_view__attr_gd_search_app_29 = $mol_type_enforce<
 		({ 
 			'src': string,
 			'targetId': string,
@@ -4320,269 +4326,269 @@ declare namespace $ {
 		,
 		ReturnType< $mol_view['attr'] >
 	>
-	type $mol_view__sub_gd_search_app_29 = $mol_type_enforce<
+	type $mol_view__sub_gd_search_app_30 = $mol_type_enforce<
 		ReturnType< $gd_search_app['main_content'] >
 		,
 		ReturnType< $mol_view['sub'] >
 	>
-	type $mol_page__title_gd_search_app_30 = $mol_type_enforce<
+	type $mol_page__title_gd_search_app_31 = $mol_type_enforce<
 		ReturnType< $gd_search_app['query'] >
 		,
 		ReturnType< $mol_page['title'] >
 	>
-	type $mol_page__bring_gd_search_app_31 = $mol_type_enforce<
+	type $mol_page__bring_gd_search_app_32 = $mol_type_enforce<
 		ReturnType< $gd_search_app['main_bring'] >
 		,
 		ReturnType< $mol_page['bring'] >
 	>
-	type $mol_page__Title_gd_search_app_32 = $mol_type_enforce<
+	type $mol_page__Title_gd_search_app_33 = $mol_type_enforce<
 		ReturnType< $gd_search_app['Query'] >
 		,
 		ReturnType< $mol_page['Title'] >
 	>
-	type $mol_page__tools_gd_search_app_33 = $mol_type_enforce<
+	type $mol_page__tools_gd_search_app_34 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_page['tools'] >
 	>
-	type $mol_page__body_content_gd_search_app_34 = $mol_type_enforce<
+	type $mol_page__body_content_gd_search_app_35 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_page['body_content'] >
 	>
-	type $mol_page__foot_gd_search_app_35 = $mol_type_enforce<
+	type $mol_page__foot_gd_search_app_36 = $mol_type_enforce<
 		ReturnType< $gd_search_app['searcher_links'] >
 		,
 		ReturnType< $mol_page['foot'] >
 	>
-	type $mol_link_donate__uri_gd_search_app_36 = $mol_type_enforce<
+	type $mol_link_donate__uri_gd_search_app_37 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link_donate['uri'] >
 	>
-	type $mol_link_support__uri_gd_search_app_37 = $mol_type_enforce<
+	type $mol_link_support__uri_gd_search_app_38 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link_support['uri'] >
 	>
-	type $mol_link__hint_gd_search_app_38 = $mol_type_enforce<
+	type $mol_link__hint_gd_search_app_39 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link['hint'] >
 	>
-	type $mol_link__uri_gd_search_app_39 = $mol_type_enforce<
+	type $mol_link__uri_gd_search_app_40 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link['uri'] >
 	>
-	type $mol_link__sub_gd_search_app_40 = $mol_type_enforce<
+	type $mol_link__sub_gd_search_app_41 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_link['sub'] >
 	>
-	type $mol_link_source__uri_gd_search_app_41 = $mol_type_enforce<
+	type $mol_link_source__uri_gd_search_app_42 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link_source['uri'] >
 	>
-	type $mol_link__arg_gd_search_app_42 = $mol_type_enforce<
+	type $mol_link__arg_gd_search_app_43 = $mol_type_enforce<
 		({ 
 			'settings': any,
 		}) 
 		,
 		ReturnType< $mol_link['arg'] >
 	>
-	type $mol_link__sub_gd_search_app_43 = $mol_type_enforce<
+	type $mol_link__sub_gd_search_app_44 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_link['sub'] >
 	>
-	type $mol_textarea__hint_gd_search_app_44 = $mol_type_enforce<
+	type $mol_textarea__hint_gd_search_app_45 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_textarea['hint'] >
 	>
-	type $mol_textarea__value_gd_search_app_45 = $mol_type_enforce<
+	type $mol_textarea__value_gd_search_app_46 = $mol_type_enforce<
 		ReturnType< $gd_search_app['searchers'] >
 		,
 		ReturnType< $mol_textarea['value'] >
 	>
-	type $mol_form_field__name_gd_search_app_46 = $mol_type_enforce<
+	type $mol_form_field__name_gd_search_app_47 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_form_field['name'] >
 	>
-	type $mol_form_field__Content_gd_search_app_47 = $mol_type_enforce<
+	type $mol_form_field__Content_gd_search_app_48 = $mol_type_enforce<
 		ReturnType< $gd_search_app['Searchers'] >
 		,
 		ReturnType< $mol_form_field['Content'] >
 	>
-	type $mol_textarea__hint_gd_search_app_48 = $mol_type_enforce<
+	type $mol_textarea__hint_gd_search_app_49 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_textarea['hint'] >
 	>
-	type $mol_textarea__value_gd_search_app_49 = $mol_type_enforce<
+	type $mol_textarea__value_gd_search_app_50 = $mol_type_enforce<
 		ReturnType< $gd_search_app['blacklist'] >
 		,
 		ReturnType< $mol_textarea['value'] >
 	>
-	type $mol_form_field__name_gd_search_app_50 = $mol_type_enforce<
+	type $mol_form_field__name_gd_search_app_51 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_form_field['name'] >
 	>
-	type $mol_form_field__Content_gd_search_app_51 = $mol_type_enforce<
+	type $mol_form_field__Content_gd_search_app_52 = $mol_type_enforce<
 		ReturnType< $gd_search_app['Blacklist'] >
 		,
 		ReturnType< $mol_form_field['Content'] >
 	>
-	type $mol_text_code__text_gd_search_app_52 = $mol_type_enforce<
+	type $mol_text_code__text_gd_search_app_53 = $mol_type_enforce<
 		ReturnType< $gd_search_app['query_dump'] >
 		,
 		ReturnType< $mol_text_code['text'] >
 	>
-	type $mol_form_field__name_gd_search_app_53 = $mol_type_enforce<
+	type $mol_form_field__name_gd_search_app_54 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_form_field['name'] >
 	>
-	type $mol_form_field__Content_gd_search_app_54 = $mol_type_enforce<
+	type $mol_form_field__Content_gd_search_app_55 = $mol_type_enforce<
 		ReturnType< $gd_search_app['Query_dump'] >
 		,
 		ReturnType< $mol_form_field['Content'] >
 	>
-	type $mol_list__rows_gd_search_app_55 = $mol_type_enforce<
+	type $mol_list__rows_gd_search_app_56 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_list['rows'] >
 	>
-	type $mol_page__title_gd_search_app_56 = $mol_type_enforce<
+	type $mol_page__title_gd_search_app_57 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_page['title'] >
 	>
-	type $mol_page__tools_gd_search_app_57 = $mol_type_enforce<
+	type $mol_page__tools_gd_search_app_58 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_page['tools'] >
 	>
-	type $mol_page__body_gd_search_app_58 = $mol_type_enforce<
+	type $mol_page__body_gd_search_app_59 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_page['body'] >
 	>
-	type $mol_paragraph__title_gd_search_app_59 = $mol_type_enforce<
+	type $mol_paragraph__title_gd_search_app_60 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_paragraph['title'] >
 	>
-	type $mol_embed_native__uri_gd_search_app_60 = $mol_type_enforce<
+	type $mol_embed_native__uri_gd_search_app_61 = $mol_type_enforce<
 		ReturnType< $gd_search_app['sideview'] >
 		,
 		ReturnType< $mol_embed_native['uri'] >
 	>
-	type $mol_embed_native__sub_gd_search_app_61 = $mol_type_enforce<
+	type $mol_embed_native__sub_gd_search_app_62 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_embed_native['sub'] >
 	>
-	type $mol_image__uri_gd_search_app_62 = $mol_type_enforce<
+	type $mol_image__uri_gd_search_app_63 = $mol_type_enforce<
 		ReturnType< $gd_search_app['result_image'] >
 		,
 		ReturnType< $mol_image['uri'] >
 	>
-	type $mol_image__title_gd_search_app_63 = $mol_type_enforce<
+	type $mol_image__title_gd_search_app_64 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_image['title'] >
 	>
-	type $mol_dimmer__haystack_gd_search_app_64 = $mol_type_enforce<
+	type $mol_dimmer__haystack_gd_search_app_65 = $mol_type_enforce<
 		ReturnType< $gd_search_app['result_title'] >
 		,
 		ReturnType< $mol_dimmer['haystack'] >
 	>
-	type $mol_dimmer__needle_gd_search_app_65 = $mol_type_enforce<
+	type $mol_dimmer__needle_gd_search_app_66 = $mol_type_enforce<
 		ReturnType< $gd_search_app['query'] >
 		,
 		ReturnType< $mol_dimmer['needle'] >
 	>
-	type $mol_dimmer__haystack_gd_search_app_66 = $mol_type_enforce<
+	type $mol_dimmer__haystack_gd_search_app_67 = $mol_type_enforce<
 		ReturnType< $gd_search_app['result_host'] >
 		,
 		ReturnType< $mol_dimmer['haystack'] >
 	>
-	type $mol_dimmer__needle_gd_search_app_67 = $mol_type_enforce<
+	type $mol_dimmer__needle_gd_search_app_68 = $mol_type_enforce<
 		ReturnType< $gd_search_app['query'] >
 		,
 		ReturnType< $mol_dimmer['needle'] >
 	>
-	type $mol_dimmer__haystack_gd_search_app_68 = $mol_type_enforce<
+	type $mol_dimmer__haystack_gd_search_app_69 = $mol_type_enforce<
 		ReturnType< $gd_search_app['result_descr'] >
 		,
 		ReturnType< $mol_dimmer['haystack'] >
 	>
-	type $mol_dimmer__needle_gd_search_app_69 = $mol_type_enforce<
+	type $mol_dimmer__needle_gd_search_app_70 = $mol_type_enforce<
 		ReturnType< $gd_search_app['query'] >
 		,
 		ReturnType< $mol_dimmer['needle'] >
 	>
-	type $mol_list__rows_gd_search_app_70 = $mol_type_enforce<
+	type $mol_list__rows_gd_search_app_71 = $mol_type_enforce<
 		ReturnType< $gd_search_app['result_main'] >
 		,
 		ReturnType< $mol_list['rows'] >
 	>
-	type $mol_row__sub_gd_search_app_71 = $mol_type_enforce<
+	type $mol_row__sub_gd_search_app_72 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_row['sub'] >
 	>
-	type $mol_select__Trigger_icon_gd_search_app_72 = $mol_type_enforce<
+	type $mol_select__Trigger_icon_gd_search_app_73 = $mol_type_enforce<
 		ReturnType< $gd_search_app['Result_ban_icon'] >
 		,
 		ReturnType< $mol_select['Trigger_icon'] >
 	>
-	type $mol_select__hint_gd_search_app_73 = $mol_type_enforce<
+	type $mol_select__hint_gd_search_app_74 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_select['hint'] >
 	>
-	type $mol_select__Filter_gd_search_app_74 = $mol_type_enforce<
+	type $mol_select__Filter_gd_search_app_75 = $mol_type_enforce<
 		any
 		,
 		ReturnType< $mol_select['Filter'] >
 	>
-	type $mol_select__align_hor_gd_search_app_75 = $mol_type_enforce<
+	type $mol_select__align_hor_gd_search_app_76 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_select['align_hor'] >
 	>
-	type $mol_select__options_gd_search_app_76 = $mol_type_enforce<
+	type $mol_select__options_gd_search_app_77 = $mol_type_enforce<
 		ReturnType< $gd_search_app['result_ban_options'] >
 		,
 		ReturnType< $mol_select['options'] >
 	>
-	type $mol_select__value_gd_search_app_77 = $mol_type_enforce<
+	type $mol_select__value_gd_search_app_78 = $mol_type_enforce<
 		ReturnType< $gd_search_app['result_ban'] >
 		,
 		ReturnType< $mol_select['value'] >
 	>
-	type $mol_link__uri_gd_search_app_78 = $mol_type_enforce<
+	type $mol_link__uri_gd_search_app_79 = $mol_type_enforce<
 		ReturnType< $gd_search_app['result_cache'] >
 		,
 		ReturnType< $mol_link['uri'] >
 	>
-	type $mol_link__hint_gd_search_app_79 = $mol_type_enforce<
+	type $mol_link__hint_gd_search_app_80 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link['hint'] >
 	>
-	type $mol_link__sub_gd_search_app_80 = $mol_type_enforce<
+	type $mol_link__sub_gd_search_app_81 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_link['sub'] >
 	>
-	type $mol_link__arg_gd_search_app_81 = $mol_type_enforce<
+	type $mol_link__arg_gd_search_app_82 = $mol_type_enforce<
 		({ 
 			'settings': any,
 			'sideview': ReturnType< $gd_search_app['result_embed'] >,
@@ -4590,52 +4596,52 @@ declare namespace $ {
 		,
 		ReturnType< $mol_link['arg'] >
 	>
-	type $mol_link__hint_gd_search_app_82 = $mol_type_enforce<
+	type $mol_link__hint_gd_search_app_83 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link['hint'] >
 	>
-	type $mol_link__sub_gd_search_app_83 = $mol_type_enforce<
+	type $mol_link__sub_gd_search_app_84 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_link['sub'] >
 	>
-	type $mol_list__rows_gd_search_app_84 = $mol_type_enforce<
+	type $mol_list__rows_gd_search_app_85 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_list['rows'] >
 	>
-	type $mol_view__title_gd_search_app_85 = $mol_type_enforce<
+	type $mol_view__title_gd_search_app_86 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_view['title'] >
 	>
-	type $mol_view__sub_gd_search_app_86 = $mol_type_enforce<
+	type $mol_view__sub_gd_search_app_87 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_view['sub'] >
 	>
-	type $mol_link__uri_gd_search_app_87 = $mol_type_enforce<
+	type $mol_link__uri_gd_search_app_88 = $mol_type_enforce<
 		ReturnType< $gd_search_app['result_uri'] >
 		,
 		ReturnType< $mol_link['uri'] >
 	>
-	type $mol_link__target_gd_search_app_88 = $mol_type_enforce<
+	type $mol_link__target_gd_search_app_89 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link['target'] >
 	>
-	type $mol_link__sub_gd_search_app_89 = $mol_type_enforce<
+	type $mol_link__sub_gd_search_app_90 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_link['sub'] >
 	>
-	type $mol_link_iconed__title_gd_search_app_90 = $mol_type_enforce<
+	type $mol_link_iconed__title_gd_search_app_91 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link_iconed['title'] >
 	>
-	type $mol_link_iconed__uri_gd_search_app_91 = $mol_type_enforce<
+	type $mol_link_iconed__uri_gd_search_app_92 = $mol_type_enforce<
 		ReturnType< $gd_search_app['searcher_link'] >
 		,
 		ReturnType< $mol_link_iconed['uri'] >
