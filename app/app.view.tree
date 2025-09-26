@@ -112,7 +112,6 @@ $gd_search_app $mol_book2
 							Content <= Blacklist $mol_textarea
 								hint @ \Every domain on new line
 								value?next <=> blacklist?next \
-									\itnan.ru
 						<= Query_dump_field $mol_form_field
 							name @ \Query Dump
 							Content <= Query_dump $mol_text_code
