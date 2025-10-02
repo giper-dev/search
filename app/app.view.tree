@@ -2,7 +2,7 @@ $gd_search_app $mol_book2
 	plugins /
 		<= Theme $mol_theme_auto
 	Placeholder null
-	query_results?next \
+	query_results? \
 	title_suffix @ \Giper Search
 	pages /
 		<= Space $gd_web_frame
@@ -12,23 +12,23 @@ $gd_search_app $mol_book2
 			bring <= main_bring
 			Title <= Query $mol_search
 				hint @ \Giper Search..
-				query?val <=> query?val \
-				submit?event <=> submit?event null
+				query? <=> query? \
+				submit? <=> submit? null
 				bring => main_bring
 			tools /
 				<= Exclude $mol_select_list
-					value?val <=> exclude?val /string
+					value? <=> exclude? /string
 					options <= exclude_options /string
-					badge_title!index <= exclude_badge_title!index \
+					badge_title* <= exclude_badge_title* \
 					pick_hint @ \Exclude words..
 					pick_enabled true
 					Pick_icon <= Exclude_icon $mol_icon_minus_circle_outline
 				<= Exact $mol_check_icon
-					checked?val <=> exact?val false
+					checked? <=> exact? false
 					Icon <= Exact_icon $mol_icon_bullseye_arrow
 					hint @ \Exact Match
 				<= Where $mol_select
-					value?next <=> where?next \anywhere
+					value? <=> where? \anywhere
 					Filter null
 					dictionary *
 						anywhere @ \Anywhere
@@ -37,7 +37,7 @@ $gd_search_app $mol_book2
 						allinurl @ \In Url
 						allinanchor @ \In Anchor
 				<= Type $mol_select
-					value?next <=> type?next \WWW
+					value? <=> type? \WWW
 					Filter null
 					options /
 						\WWW
@@ -102,7 +102,7 @@ $gd_search_app $mol_book2
 							name @ \Alternative Searcher Engines
 							Content <= Searchers $mol_textarea
 								hint @ \Every search query prefix on new line
-								value?next <=> searchers?next \
+								value? <=> searchers? \
 									\https://google.com/search?udm=14&q=
 									\https://yandex.ru/search/?text=
 									\https://duckduckgo.com/?q=
@@ -111,60 +111,69 @@ $gd_search_app $mol_book2
 							name @ \Domain Black List
 							Content <= Blacklist $mol_textarea
 								hint @ \Every domain on new line
-								value?next <=> blacklist?next \
+								value? <=> blacklist? \
 						<= Query_dump_field $mol_form_field
 							name @ \Query Dump
 							Content <= Query_dump $mol_text_code
 								text <= query_dump \
-	Sideview!uri $mol_view
+	Sideview* $mol_page
 		title @ \Found
-		sub /
+		tools /
+			<= Sideview_archived* $mol_link
+				arg * archived \
+				hint @ \Archived
+				sub /
+					<= Sideview_archived_icon* $mol_icon_backup_restore
+			<= Sideview_close $mol_link
+				arg * sideview null
+				sub /
+					<= Sideview_close_icon $mol_icon_close
+		body_content /
 			<= Sideview_hint $mol_paragraph
 				title @ \Open in new tab if didn't load
-			<= Sideview_embed!uri $mol_embed_native
-				uri <= sideview?val \about:blank
+			<= Sideview_embed* $mol_embed_native
+				uri <= sideview? \about:blank
 				sub /
-	Result_item!index $mol_link
-		uri <= result_uri!index \
-		target \search_result
+	Result_item* $mol_link
+		uri <= result_uri* \
 		sub /
-			<= Result_info!index $mol_row
+			<= Result_info* $mol_row
 				sub /
-					<= Result_image!index $mol_image
-						uri <= result_image!index \
+					<= Result_image* $mol_image
+						uri <= result_image* \
 						title \
-					<= Result_main!index $mol_list
-						rows <= result_main!index /
-							<= Result_title!index $mol_dimmer
-								haystack <= result_title!index \
+					<= Result_main* $mol_list
+						rows <= result_main* /
+							<= Result_title* $mol_dimmer
+								haystack <= result_title* \
 								needle <= query
-							<= Result_host!index $mol_dimmer
-								haystack <= result_host!index \
+							<= Result_host* $mol_dimmer
+								haystack <= result_host* \
 								needle <= query
-							<= Result_descr!index $mol_dimmer
-								haystack <= result_descr!index \
+							<= Result_descr* $mol_dimmer
+								haystack <= result_descr* \
 								needle <= query
-			<= Result_tools!index $mol_list
+			<= Result_tools* $mol_list
 				rows /
-					<= Result_ban!index $mol_select
-						Trigger_icon <= Result_ban_icon!index $mol_icon_close
+					<= Result_ban* $mol_select
+						Trigger_icon <= Result_ban_icon* $mol_icon_close
 						hint @ \Ban site..
 						Filter null
 						align_hor \left
-						options <= result_ban_options!index /string
-						value?val <=> result_ban!index?val \
-					<= Result_cache!index $mol_link
-						uri <= result_cache!index \
-						hint @ \Open cached
+						options <= result_ban_options* /string
+						value? <=> result_ban*? \
+					<= Result_archived* $mol_link
+						uri <= result_archived* \
+						hint @ \Open archived
 						sub /
-							<= Result_cache_icon!index $mol_icon_backup_restore
-					<= Result_open!index $mol_link
+							<= Result_archived_icon* $mol_icon_backup_restore
+					<= Result_open* $mol_link
 						arg *
 							settings null
-							sideview <= result_embed!index \
+							sideview <= result_embed* \
 						hint @ \Open in side bar
 						sub /
-							<= Result_open_icon!index $mol_icon_book_open_outline
+							<= Result_open_icon* $mol_icon_book_open_outline
 	Searcher_link!id $mol_link_iconed
 		title \
 		uri <= searcher_link!id \

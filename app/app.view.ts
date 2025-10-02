@@ -27,8 +27,11 @@ namespace $.$$ {
 			return this.$.$mol_state_arg.value( 'where', next ) ?? 'anywhere'
 		}
 		
+		@ $mol_mem
 		sideview( next?: string ) {
-			return this.$.$mol_state_arg.value( 'sideview', next ) ?? ''
+			const archived = this.$.$mol_state_arg.value( 'archived' )
+			const url = this.$.$mol_state_arg.value( 'sideview', next ) ?? ''
+			return archived !== null ? 'https://web.archive.org/' + url : url
 		}
 		
 		@ $mol_mem
@@ -219,9 +222,8 @@ namespace $.$$ {
 		}
 		
 		@ $mol_mem_key
-		result_cache( index: number ) {
-			return 'https://www.google.com/search?q='
-				+ encodeURIComponent( 'cache:' + this.result_uri( index ) )
+		result_archived( index: number ) {
+			return 'https://web.archive.org/' + this.result_uri( index )
 		}
 		
 		@ $mol_mem_key
