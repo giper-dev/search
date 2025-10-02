@@ -121,7 +121,7 @@ $gd_search_app $mol_book2
 		tools /
 			<= Sideview_archived* $mol_link
 				arg * archived \
-				hint @ \Archived
+				hint @ \Archived copy
 				sub /
 					<= Sideview_archived_icon* $mol_icon_backup_restore
 			<= Sideview_close $mol_link
