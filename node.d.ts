@@ -3847,6 +3847,15 @@ declare namespace $ {
 
 declare namespace $ {
 
+	export class $mol_icon_backup_restore extends $mol_icon {
+		path( ): string
+	}
+	
+}
+
+//# sourceMappingURL=restore.view.tree.d.ts.map
+declare namespace $ {
+
 	export class $mol_image extends $mol_view {
 		uri( ): string
 		loading( ): string
@@ -3887,15 +3896,6 @@ declare namespace $ {
 }
 
 //# sourceMappingURL=row.view.tree.d.ts.map
-declare namespace $ {
-
-	export class $mol_icon_backup_restore extends $mol_icon {
-		path( ): string
-	}
-	
-}
-
-//# sourceMappingURL=restore.view.tree.d.ts.map
 declare namespace $ {
 
 	export class $mol_icon_book extends $mol_icon {
@@ -4551,117 +4551,146 @@ declare namespace $ {
 		,
 		ReturnType< $mol_page['body'] >
 	>
-	type $mol_paragraph__title_gd_search_app_60 = $mol_type_enforce<
-		string
+	type $mol_link__arg_gd_search_app_60 = $mol_type_enforce<
+		({ 
+			'archived': string,
+		}) 
 		,
-		ReturnType< $mol_paragraph['title'] >
+		ReturnType< $mol_link['arg'] >
 	>
-	type $mol_embed_native__uri_gd_search_app_61 = $mol_type_enforce<
-		ReturnType< $gd_search_app['sideview'] >
-		,
-		ReturnType< $mol_embed_native['uri'] >
-	>
-	type $mol_embed_native__sub_gd_search_app_62 = $mol_type_enforce<
-		readonly(any)[]
-		,
-		ReturnType< $mol_embed_native['sub'] >
-	>
-	type $mol_image__uri_gd_search_app_63 = $mol_type_enforce<
-		ReturnType< $gd_search_app['result_image'] >
-		,
-		ReturnType< $mol_image['uri'] >
-	>
-	type $mol_image__title_gd_search_app_64 = $mol_type_enforce<
-		string
-		,
-		ReturnType< $mol_image['title'] >
-	>
-	type $mol_dimmer__haystack_gd_search_app_65 = $mol_type_enforce<
-		ReturnType< $gd_search_app['result_title'] >
-		,
-		ReturnType< $mol_dimmer['haystack'] >
-	>
-	type $mol_dimmer__needle_gd_search_app_66 = $mol_type_enforce<
-		ReturnType< $gd_search_app['query'] >
-		,
-		ReturnType< $mol_dimmer['needle'] >
-	>
-	type $mol_dimmer__haystack_gd_search_app_67 = $mol_type_enforce<
-		ReturnType< $gd_search_app['result_host'] >
-		,
-		ReturnType< $mol_dimmer['haystack'] >
-	>
-	type $mol_dimmer__needle_gd_search_app_68 = $mol_type_enforce<
-		ReturnType< $gd_search_app['query'] >
-		,
-		ReturnType< $mol_dimmer['needle'] >
-	>
-	type $mol_dimmer__haystack_gd_search_app_69 = $mol_type_enforce<
-		ReturnType< $gd_search_app['result_descr'] >
-		,
-		ReturnType< $mol_dimmer['haystack'] >
-	>
-	type $mol_dimmer__needle_gd_search_app_70 = $mol_type_enforce<
-		ReturnType< $gd_search_app['query'] >
-		,
-		ReturnType< $mol_dimmer['needle'] >
-	>
-	type $mol_list__rows_gd_search_app_71 = $mol_type_enforce<
-		ReturnType< $gd_search_app['result_main'] >
-		,
-		ReturnType< $mol_list['rows'] >
-	>
-	type $mol_row__sub_gd_search_app_72 = $mol_type_enforce<
-		readonly(any)[]
-		,
-		ReturnType< $mol_row['sub'] >
-	>
-	type $mol_select__Trigger_icon_gd_search_app_73 = $mol_type_enforce<
-		ReturnType< $gd_search_app['Result_ban_icon'] >
-		,
-		ReturnType< $mol_select['Trigger_icon'] >
-	>
-	type $mol_select__hint_gd_search_app_74 = $mol_type_enforce<
-		string
-		,
-		ReturnType< $mol_select['hint'] >
-	>
-	type $mol_select__Filter_gd_search_app_75 = $mol_type_enforce<
-		any
-		,
-		ReturnType< $mol_select['Filter'] >
-	>
-	type $mol_select__align_hor_gd_search_app_76 = $mol_type_enforce<
-		string
-		,
-		ReturnType< $mol_select['align_hor'] >
-	>
-	type $mol_select__options_gd_search_app_77 = $mol_type_enforce<
-		ReturnType< $gd_search_app['result_ban_options'] >
-		,
-		ReturnType< $mol_select['options'] >
-	>
-	type $mol_select__value_gd_search_app_78 = $mol_type_enforce<
-		ReturnType< $gd_search_app['result_ban'] >
-		,
-		ReturnType< $mol_select['value'] >
-	>
-	type $mol_link__uri_gd_search_app_79 = $mol_type_enforce<
-		ReturnType< $gd_search_app['result_cache'] >
-		,
-		ReturnType< $mol_link['uri'] >
-	>
-	type $mol_link__hint_gd_search_app_80 = $mol_type_enforce<
+	type $mol_link__hint_gd_search_app_61 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link['hint'] >
 	>
-	type $mol_link__sub_gd_search_app_81 = $mol_type_enforce<
+	type $mol_link__sub_gd_search_app_62 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_link['sub'] >
 	>
-	type $mol_link__arg_gd_search_app_82 = $mol_type_enforce<
+	type $mol_link__arg_gd_search_app_63 = $mol_type_enforce<
+		({ 
+			'sideview': any,
+		}) 
+		,
+		ReturnType< $mol_link['arg'] >
+	>
+	type $mol_link__sub_gd_search_app_64 = $mol_type_enforce<
+		readonly(any)[]
+		,
+		ReturnType< $mol_link['sub'] >
+	>
+	type $mol_paragraph__title_gd_search_app_65 = $mol_type_enforce<
+		string
+		,
+		ReturnType< $mol_paragraph['title'] >
+	>
+	type $mol_embed_native__uri_gd_search_app_66 = $mol_type_enforce<
+		ReturnType< $gd_search_app['sideview'] >
+		,
+		ReturnType< $mol_embed_native['uri'] >
+	>
+	type $mol_embed_native__sub_gd_search_app_67 = $mol_type_enforce<
+		readonly(any)[]
+		,
+		ReturnType< $mol_embed_native['sub'] >
+	>
+	type $mol_image__uri_gd_search_app_68 = $mol_type_enforce<
+		ReturnType< $gd_search_app['result_image'] >
+		,
+		ReturnType< $mol_image['uri'] >
+	>
+	type $mol_image__title_gd_search_app_69 = $mol_type_enforce<
+		string
+		,
+		ReturnType< $mol_image['title'] >
+	>
+	type $mol_dimmer__haystack_gd_search_app_70 = $mol_type_enforce<
+		ReturnType< $gd_search_app['result_title'] >
+		,
+		ReturnType< $mol_dimmer['haystack'] >
+	>
+	type $mol_dimmer__needle_gd_search_app_71 = $mol_type_enforce<
+		ReturnType< $gd_search_app['query'] >
+		,
+		ReturnType< $mol_dimmer['needle'] >
+	>
+	type $mol_dimmer__haystack_gd_search_app_72 = $mol_type_enforce<
+		ReturnType< $gd_search_app['result_host'] >
+		,
+		ReturnType< $mol_dimmer['haystack'] >
+	>
+	type $mol_dimmer__needle_gd_search_app_73 = $mol_type_enforce<
+		ReturnType< $gd_search_app['query'] >
+		,
+		ReturnType< $mol_dimmer['needle'] >
+	>
+	type $mol_dimmer__haystack_gd_search_app_74 = $mol_type_enforce<
+		ReturnType< $gd_search_app['result_descr'] >
+		,
+		ReturnType< $mol_dimmer['haystack'] >
+	>
+	type $mol_dimmer__needle_gd_search_app_75 = $mol_type_enforce<
+		ReturnType< $gd_search_app['query'] >
+		,
+		ReturnType< $mol_dimmer['needle'] >
+	>
+	type $mol_list__rows_gd_search_app_76 = $mol_type_enforce<
+		ReturnType< $gd_search_app['result_main'] >
+		,
+		ReturnType< $mol_list['rows'] >
+	>
+	type $mol_row__sub_gd_search_app_77 = $mol_type_enforce<
+		readonly(any)[]
+		,
+		ReturnType< $mol_row['sub'] >
+	>
+	type $mol_select__Trigger_icon_gd_search_app_78 = $mol_type_enforce<
+		ReturnType< $gd_search_app['Result_ban_icon'] >
+		,
+		ReturnType< $mol_select['Trigger_icon'] >
+	>
+	type $mol_select__hint_gd_search_app_79 = $mol_type_enforce<
+		string
+		,
+		ReturnType< $mol_select['hint'] >
+	>
+	type $mol_select__Filter_gd_search_app_80 = $mol_type_enforce<
+		any
+		,
+		ReturnType< $mol_select['Filter'] >
+	>
+	type $mol_select__align_hor_gd_search_app_81 = $mol_type_enforce<
+		string
+		,
+		ReturnType< $mol_select['align_hor'] >
+	>
+	type $mol_select__options_gd_search_app_82 = $mol_type_enforce<
+		ReturnType< $gd_search_app['result_ban_options'] >
+		,
+		ReturnType< $mol_select['options'] >
+	>
+	type $mol_select__value_gd_search_app_83 = $mol_type_enforce<
+		ReturnType< $gd_search_app['result_ban'] >
+		,
+		ReturnType< $mol_select['value'] >
+	>
+	type $mol_link__uri_gd_search_app_84 = $mol_type_enforce<
+		ReturnType< $gd_search_app['result_archived'] >
+		,
+		ReturnType< $mol_link['uri'] >
+	>
+	type $mol_link__hint_gd_search_app_85 = $mol_type_enforce<
+		string
+		,
+		ReturnType< $mol_link['hint'] >
+	>
+	type $mol_link__sub_gd_search_app_86 = $mol_type_enforce<
+		readonly(any)[]
+		,
+		ReturnType< $mol_link['sub'] >
+	>
+	type $mol_link__arg_gd_search_app_87 = $mol_type_enforce<
 		({ 
 			'settings': any,
 			'sideview': ReturnType< $gd_search_app['result_embed'] >,
@@ -4669,52 +4698,52 @@ declare namespace $ {
 		,
 		ReturnType< $mol_link['arg'] >
 	>
-	type $mol_link__hint_gd_search_app_83 = $mol_type_enforce<
+	type $mol_link__hint_gd_search_app_88 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link['hint'] >
 	>
-	type $mol_link__sub_gd_search_app_84 = $mol_type_enforce<
+	type $mol_link__sub_gd_search_app_89 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_link['sub'] >
 	>
-	type $mol_list__rows_gd_search_app_85 = $mol_type_enforce<
+	type $mol_list__rows_gd_search_app_90 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_list['rows'] >
 	>
-	type $mol_view__title_gd_search_app_86 = $mol_type_enforce<
+	type $mol_page__title_gd_search_app_91 = $mol_type_enforce<
 		string
 		,
-		ReturnType< $mol_view['title'] >
+		ReturnType< $mol_page['title'] >
 	>
-	type $mol_view__sub_gd_search_app_87 = $mol_type_enforce<
+	type $mol_page__tools_gd_search_app_92 = $mol_type_enforce<
 		readonly(any)[]
 		,
-		ReturnType< $mol_view['sub'] >
+		ReturnType< $mol_page['tools'] >
 	>
-	type $mol_link__uri_gd_search_app_88 = $mol_type_enforce<
+	type $mol_page__body_content_gd_search_app_93 = $mol_type_enforce<
+		readonly(any)[]
+		,
+		ReturnType< $mol_page['body_content'] >
+	>
+	type $mol_link__uri_gd_search_app_94 = $mol_type_enforce<
 		ReturnType< $gd_search_app['result_uri'] >
 		,
 		ReturnType< $mol_link['uri'] >
 	>
-	type $mol_link__target_gd_search_app_89 = $mol_type_enforce<
-		string
-		,
-		ReturnType< $mol_link['target'] >
-	>
-	type $mol_link__sub_gd_search_app_90 = $mol_type_enforce<
+	type $mol_link__sub_gd_search_app_95 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_link['sub'] >
 	>
-	type $mol_link_iconed__title_gd_search_app_91 = $mol_type_enforce<
+	type $mol_link_iconed__title_gd_search_app_96 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_link_iconed['title'] >
 	>
-	type $mol_link_iconed__uri_gd_search_app_92 = $mol_type_enforce<
+	type $mol_link_iconed__uri_gd_search_app_97 = $mol_type_enforce<
 		ReturnType< $gd_search_app['searcher_link'] >
 		,
 		ReturnType< $mol_link_iconed['uri'] >
@@ -4771,6 +4800,10 @@ declare namespace $ {
 		Query_dump_field( ): $mol_form_field
 		Settings_fields( ): $mol_list
 		Settings( ): $mol_page
+		Sideview_archived_icon( id: any): $mol_icon_backup_restore
+		Sideview_archived( id: any): $mol_link
+		Sideview_close_icon( ): $mol_icon_close
+		Sideview_close( ): $mol_link
 		Sideview_hint( ): $mol_paragraph
 		sideview( next?: string ): string
 		Sideview_embed( id: any): $mol_embed_native
@@ -4790,9 +4823,9 @@ declare namespace $ {
 		result_ban_options( id: any): readonly(string)[]
 		result_ban( id: any, next?: string ): string
 		Result_ban( id: any): $mol_select
-		result_cache( id: any): string
-		Result_cache_icon( id: any): $mol_icon_backup_restore
-		Result_cache( id: any): $mol_link
+		result_archived( id: any): string
+		Result_archived_icon( id: any): $mol_icon_backup_restore
+		Result_archived( id: any): $mol_link
 		result_embed( id: any): string
 		Result_open_icon( id: any): $mol_icon_book_open_outline
 		Result_open( id: any): $mol_link
@@ -4803,7 +4836,7 @@ declare namespace $ {
 		query_results( next?: string ): string
 		title_suffix( ): string
 		pages( ): readonly(any)[]
-		Sideview( id: any): $mol_view
+		Sideview( id: any): $mol_page
 		Result_item( id: any): $mol_link
 		Searcher_link( id: any): $mol_link_iconed
 	}
@@ -4829,7 +4862,7 @@ declare namespace $.$$ {
         blacklist(next?: string): string;
         searchers(next?: string): string;
         settings(next?: boolean): boolean;
-        pages(): ($mol_view | $.$gd_web_frame | $mol_page)[];
+        pages(): ($.$gd_web_frame | $mol_page)[];
         title(): string;
         main_content(): readonly any[];
         error(): Element | null;
@@ -4941,7 +4974,7 @@ declare namespace $.$$ {
         result_title(index: number): string;
         result_descr(index: number): string;
         result_host(index: number): string;
-        result_cache(index: number): string;
+        result_archived(index: number): string;
         result_words(index: number): Map<string, number>;
         words(): Map<string, number>;
         exclude_options(): readonly string[];

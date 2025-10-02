@@ -10041,6 +10041,17 @@ var $;
 })($ || ($ = {}));
 
 ;
+	($.$mol_icon_backup_restore) = class $mol_icon_backup_restore extends ($.$mol_icon) {
+		path(){
+			return "M12,3A9,9 0 0,0 3,12H0L4,16L8,12H5A7,7 0 0,1 12,5A7,7 0 0,1 19,12A7,7 0 0,1 12,19C10.5,19 9.09,18.5 7.94,17.7L6.5,19.14C8.04,20.3 9.94,21 12,21A9,9 0 0,0 21,12A9,9 0 0,0 12,3M14,12A2,2 0 0,0 12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12Z";
+		}
+	};
+
+
+;
+"use strict";
+
+;
 	($.$mol_image) = class $mol_image extends ($.$mol_view) {
 		uri(){
 			return "";
@@ -10149,17 +10160,6 @@ var $;
 (function ($) {
     $mol_style_attach("mol/row/row.view.css", "[mol_row] {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\talign-items: flex-start;\n\talign-content: flex-start;\n\tjustify-content: flex-start;\n\tpadding: var(--mol_gap_block);\n\tgap: var(--mol_gap_block);\n\tflex: 0 0 auto;\n\tbox-sizing: border-box;\n\tmax-width: 100%;\n}\n\n[mol_row] > * {\n\tmax-width: 100%;\n}\n");
 })($ || ($ = {}));
-
-;
-"use strict";
-
-;
-	($.$mol_icon_backup_restore) = class $mol_icon_backup_restore extends ($.$mol_icon) {
-		path(){
-			return "M12,3A9,9 0 0,0 3,12H0L4,16L8,12H5A7,7 0 0,1 12,5A7,7 0 0,1 19,12A7,7 0 0,1 12,19C10.5,19 9.09,18.5 7.94,17.7L6.5,19.14C8.04,20.3 9.94,21 12,21A9,9 0 0,0 21,12A9,9 0 0,0 12,3M14,12A2,2 0 0,0 12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12Z";
-		}
-	};
-
 
 ;
 "use strict";
@@ -10819,6 +10819,27 @@ var $;
 			(obj.body) = () => ([(this.Settings_fields())]);
 			return obj;
 		}
+		Sideview_archived_icon(id){
+			const obj = new this.$.$mol_icon_backup_restore();
+			return obj;
+		}
+		Sideview_archived(id){
+			const obj = new this.$.$mol_link();
+			(obj.arg) = () => ({"archived": ""});
+			(obj.hint) = () => ((this.$.$mol_locale.text("$gd_search_app_Sideview_archived_hint")));
+			(obj.sub) = () => ([(this.Sideview_archived_icon(id))]);
+			return obj;
+		}
+		Sideview_close_icon(){
+			const obj = new this.$.$mol_icon_close();
+			return obj;
+		}
+		Sideview_close(){
+			const obj = new this.$.$mol_link();
+			(obj.arg) = () => ({"sideview": null});
+			(obj.sub) = () => ([(this.Sideview_close_icon())]);
+			return obj;
+		}
 		Sideview_hint(){
 			const obj = new this.$.$mol_paragraph();
 			(obj.title) = () => ((this.$.$mol_locale.text("$gd_search_app_Sideview_hint_title")));
@@ -10911,18 +10932,18 @@ var $;
 			(obj.value) = (next) => ((this.result_ban(id, next)));
 			return obj;
 		}
-		result_cache(id){
+		result_archived(id){
 			return "";
 		}
-		Result_cache_icon(id){
+		Result_archived_icon(id){
 			const obj = new this.$.$mol_icon_backup_restore();
 			return obj;
 		}
-		Result_cache(id){
+		Result_archived(id){
 			const obj = new this.$.$mol_link();
-			(obj.uri) = () => ((this.result_cache(id)));
-			(obj.hint) = () => ((this.$.$mol_locale.text("$gd_search_app_Result_cache_hint")));
-			(obj.sub) = () => ([(this.Result_cache_icon(id))]);
+			(obj.uri) = () => ((this.result_archived(id)));
+			(obj.hint) = () => ((this.$.$mol_locale.text("$gd_search_app_Result_archived_hint")));
+			(obj.sub) = () => ([(this.Result_archived_icon(id))]);
 			return obj;
 		}
 		result_embed(id){
@@ -10943,7 +10964,7 @@ var $;
 			const obj = new this.$.$mol_list();
 			(obj.rows) = () => ([
 				(this.Result_ban(id)), 
-				(this.Result_cache(id)), 
+				(this.Result_archived(id)), 
 				(this.Result_open(id))
 			]);
 			return obj;
@@ -10972,15 +10993,15 @@ var $;
 			];
 		}
 		Sideview(id){
-			const obj = new this.$.$mol_view();
+			const obj = new this.$.$mol_page();
 			(obj.title) = () => ((this.$.$mol_locale.text("$gd_search_app_Sideview_title")));
-			(obj.sub) = () => ([(this.Sideview_hint()), (this.Sideview_embed(id))]);
+			(obj.tools) = () => ([(this.Sideview_archived(id)), (this.Sideview_close())]);
+			(obj.body_content) = () => ([(this.Sideview_hint()), (this.Sideview_embed(id))]);
 			return obj;
 		}
 		Result_item(id){
 			const obj = new this.$.$mol_link();
 			(obj.uri) = () => ((this.result_uri(id)));
-			(obj.target) = () => ("search_result");
 			(obj.sub) = () => ([(this.Result_info(id)), (this.Result_tools(id))]);
 			return obj;
 		}
@@ -11033,6 +11054,10 @@ var $;
 	($mol_mem(($.$gd_search_app.prototype), "Query_dump_field"));
 	($mol_mem(($.$gd_search_app.prototype), "Settings_fields"));
 	($mol_mem(($.$gd_search_app.prototype), "Settings"));
+	($mol_mem_key(($.$gd_search_app.prototype), "Sideview_archived_icon"));
+	($mol_mem_key(($.$gd_search_app.prototype), "Sideview_archived"));
+	($mol_mem(($.$gd_search_app.prototype), "Sideview_close_icon"));
+	($mol_mem(($.$gd_search_app.prototype), "Sideview_close"));
 	($mol_mem(($.$gd_search_app.prototype), "Sideview_hint"));
 	($mol_mem(($.$gd_search_app.prototype), "sideview"));
 	($mol_mem_key(($.$gd_search_app.prototype), "Sideview_embed"));
@@ -11045,8 +11070,8 @@ var $;
 	($mol_mem_key(($.$gd_search_app.prototype), "Result_ban_icon"));
 	($mol_mem_key(($.$gd_search_app.prototype), "result_ban"));
 	($mol_mem_key(($.$gd_search_app.prototype), "Result_ban"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Result_cache_icon"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Result_cache"));
+	($mol_mem_key(($.$gd_search_app.prototype), "Result_archived_icon"));
+	($mol_mem_key(($.$gd_search_app.prototype), "Result_archived"));
 	($mol_mem_key(($.$gd_search_app.prototype), "Result_open_icon"));
 	($mol_mem_key(($.$gd_search_app.prototype), "Result_open"));
 	($mol_mem_key(($.$gd_search_app.prototype), "Result_tools"));
@@ -11431,7 +11456,9 @@ var $;
                 return this.$.$mol_state_arg.value('where', next) ?? 'anywhere';
             }
             sideview(next) {
-                return this.$.$mol_state_arg.value('sideview', next) ?? '';
+                const archived = this.$.$mol_state_arg.value('archived');
+                const url = this.$.$mol_state_arg.value('sideview', next) ?? '';
+                return archived !== null ? 'https://web.archive.org/' + url : url;
             }
             exact(next) {
                 const arg = next === undefined ? undefined : next ? '' : null;
@@ -11565,9 +11592,8 @@ var $;
             result_host(index) {
                 return this.results_raw()[index].visibleUrl ?? '';
             }
-            result_cache(index) {
-                return 'https://www.google.com/search?q='
-                    + encodeURIComponent('cache:' + this.result_uri(index));
+            result_archived(index) {
+                return 'https://web.archive.org/' + this.result_uri(index);
             }
             result_words(index) {
                 const stats = new Map();
@@ -11645,6 +11671,9 @@ var $;
         ], $gd_search_app.prototype, "$", null);
         __decorate([
             $mol_mem
+        ], $gd_search_app.prototype, "sideview", null);
+        __decorate([
+            $mol_mem
         ], $gd_search_app.prototype, "exact", null);
         __decorate([
             $mol_mem
@@ -11714,7 +11743,7 @@ var $;
         ], $gd_search_app.prototype, "result_descr", null);
         __decorate([
             $mol_mem_key
-        ], $gd_search_app.prototype, "result_cache", null);
+        ], $gd_search_app.prototype, "result_archived", null);
         __decorate([
             $mol_mem_key
         ], $gd_search_app.prototype, "result_words", null);
@@ -11753,7 +11782,7 @@ var $;
 "use strict";
 var $;
 (function ($) {
-    $mol_style_attach("gd/search/app/app.view.css", "#recaptcha\\-wrapper {\n\tmargin: var(--mol_gap_block) !important;\n}\n\n#recaptcha\\-wrapper a,\n#recaptcha\\-wrapper .gs\\-captcha\\-info\\-link {\n\ttext-decoration: none;\n\tcolor: var(--mol_theme_control);\n}\n\n[gd_search_app_main] {\n\tflex: 0 0 60rem;\n\tmargin: 0 auto;\n}\n\n[gd_search_app_main_foot] {\n\tjustify-content: space-evenly;\n}\n\n[gd_search_app_sideview] {\n\tflex: 10000 0 40rem;\n\tbox-shadow: 0 0 0 1px var(--mol_theme_line);\n\tz-index: 2;\n\tbackground: white;\n}\n\n[gd_search_app_content] {\n\tflex-direction: column;\n\tpadding: var(--mol_gap_block);\n}\n\n[gd_search_app_sideview_hint] {\n\tflex: 1 1 auto;\n\tpadding: 0 .25rem;\n\tfont-size: .75rem;\n\tjustify-content: center;\n}\n\n[gd_search_app_sideview_embed] {\n\tposition: absolute;\n\twidth: 100%;\n\theight: 100%;\n\tmax-height: 100%;\n\taspect-ratio: auto;\n\tborder-radius: 0;\n\tbackground: transparent;\n}\n\n[gd_search_app_settings] {\n\tflex: 0 0 25rem;\n}\n\n[gd_search_app_result_item] {\n\tpadding: 0;\n\tbackground: var(--mol_theme_card);\n}\n\n[gd_search_app_result_image] {\n\tflex: 1 0 6rem;\n\tmax-height: 6rem;\n\tobject-fit: scale-down;\n}\n\n[gd_search_app_result_info] {\n\tflex: 1 1 auto;\n\tflex-wrap: wrap;\n\talign-items: center;\n\talign-content: center;\n}\n\n[gd_search_app_result_main] {\n\tflex: 10000 1 14rem;\n}\n\n[gd_search_app_result_title] {\n\tcolor: var(--mol_theme_text);\n\ttext-shadow: 0 0;\n}\n\n[gd_search_app_result_descr] {\n\tcolor: var(--mol_theme_text);\n}\n\n[gd_search_app_main_tools] {\n\tflex-grow: 0;\n}\n\n[gd_search_app_result_title_low] {\n\topacity: 1;\n}\n\n[gd_search_app_result_descr_low] {\n\topacity: 1;\n}\n\n[gd_search_app_result_host_low] {\n\topacity: 1;\n}\n\n[gd_search_app_result_list] {\n\tgap: var(--mol_gap_block);\n}\n\n[gd_search_app_result_list_empty] {\n\tpadding: var(--mol_gap_text);\n}\n\n[gd_search_app_attribution] {\n\tpadding: var(--mol_gap_text);\n}\n\n[gd_search_app_result_ban_option_label] {\n\ttext-align: right;\n}\n");
+    $mol_style_attach("gd/search/app/app.view.css", "#recaptcha\\-wrapper {\n\tmargin: var(--mol_gap_block) !important;\n}\n\n#recaptcha\\-wrapper a,\n#recaptcha\\-wrapper .gs\\-captcha\\-info\\-link {\n\ttext-decoration: none;\n\tcolor: var(--mol_theme_control);\n}\n\n[gd_search_app_main] {\n\tflex: 0 0 60rem;\n\tmargin: 0 auto;\n}\n\n[gd_search_app_main_foot] {\n\tjustify-content: space-evenly;\n}\n\n[gd_search_app_sideview] {\n\tflex: 10000 0 40rem;\n}\n\n[gd_search_app_content] {\n\tflex-direction: column;\n\tpadding: var(--mol_gap_block);\n}\n\n[gd_search_app_sideview_hint] {\n\tflex: 1 1 auto;\n\tpadding: 0 .25rem;\n\tfont-size: .75rem;\n\tjustify-content: center;\n}\n\n[gd_search_app_sideview_embed] {\n\talign-self: stretch;\n\tjustify-self: stretch;\n\tborder-radius: 0;\n\tbackground: transparent;\n}\n\n[gd_search_app_settings] {\n\tflex: 0 0 25rem;\n}\n\n[gd_search_app_result_item] {\n\tpadding: 0;\n\tbackground: var(--mol_theme_card);\n}\n\n[gd_search_app_result_image] {\n\tflex: 1 0 6rem;\n\tmax-height: 6rem;\n\tobject-fit: scale-down;\n}\n\n[gd_search_app_result_info] {\n\tflex: 1 1 auto;\n\tflex-wrap: wrap;\n\talign-items: center;\n\talign-content: center;\n}\n\n[gd_search_app_result_main] {\n\tflex: 10000 1 14rem;\n}\n\n[gd_search_app_result_title] {\n\tcolor: var(--mol_theme_text);\n\ttext-shadow: 0 0;\n}\n\n[gd_search_app_result_descr] {\n\tcolor: var(--mol_theme_text);\n}\n\n[gd_search_app_main_tools] {\n\tflex-grow: 0;\n}\n\n[gd_search_app_result_title_low] {\n\topacity: 1;\n}\n\n[gd_search_app_result_descr_low] {\n\topacity: 1;\n}\n\n[gd_search_app_result_host_low] {\n\topacity: 1;\n}\n\n[gd_search_app_result_list] {\n\tgap: var(--mol_gap_block);\n}\n\n[gd_search_app_result_list_empty] {\n\tpadding: var(--mol_gap_text);\n}\n\n[gd_search_app_attribution] {\n\tpadding: var(--mol_gap_text);\n}\n\n[gd_search_app_result_ban_option_label] {\n\ttext-align: right;\n}\n");
 })($ || ($ = {}));
 
 
