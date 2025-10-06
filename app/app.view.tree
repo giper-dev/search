@@ -79,10 +79,10 @@ $gd_search_app $mol_book2
 		<= Settings $mol_page
 			title @ \Settings
 			tools /
-				<= Support $mol_link_donate
+				<= Donate $mol_link_donate
 					uri \https://boosty.to/hyoo
-				<= Donate $mol_link_support
-					uri \https://t.me/giper-dev/72
+				<= Support $mol_link_support
+					uri \https://t.me/giper_web/72
 				<= Lights $mol_lights_toggle
 				<= Info $mol_link
 					hint @ \Article about
