@@ -10248,14 +10248,14 @@ var $;
 			(obj.foot) = () => ((this.searcher_links()));
 			return obj;
 		}
-		Support(){
+		Donate(){
 			const obj = new this.$.$mol_link_donate();
 			(obj.uri) = () => ("https://boosty.to/hyoo");
 			return obj;
 		}
-		Donate(){
+		Support(){
 			const obj = new this.$.$mol_link_support();
-			(obj.uri) = () => ("https://t.me/giper-dev/72");
+			(obj.uri) = () => ("https://t.me/giper_web/72");
 			return obj;
 		}
 		Lights(){
@@ -10347,8 +10347,8 @@ var $;
 			const obj = new this.$.$mol_page();
 			(obj.title) = () => ((this.$.$mol_locale.text("$gd_search_app_Settings_title")));
 			(obj.tools) = () => ([
-				(this.Support()), 
 				(this.Donate()), 
+				(this.Support()), 
 				(this.Lights()), 
 				(this.Info()), 
 				(this.Sources()), 
@@ -10574,8 +10574,8 @@ var $;
 	($mol_mem(($.$gd_search_app.prototype), "Attribution_loader"));
 	($mol_mem(($.$gd_search_app.prototype), "Content"));
 	($mol_mem(($.$gd_search_app.prototype), "Main"));
-	($mol_mem(($.$gd_search_app.prototype), "Support"));
 	($mol_mem(($.$gd_search_app.prototype), "Donate"));
+	($mol_mem(($.$gd_search_app.prototype), "Support"));
 	($mol_mem(($.$gd_search_app.prototype), "Lights"));
 	($mol_mem(($.$gd_search_app.prototype), "Info_icon"));
 	($mol_mem(($.$gd_search_app.prototype), "Info"));

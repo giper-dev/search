@@ -4682,8 +4682,8 @@ declare namespace $ {
 		Content( ): $mol_view
 		searcher_links( ): readonly(any)[]
 		Main( ): $mol_page
-		Support( ): $mol_link_donate
-		Donate( ): $mol_link_support
+		Donate( ): $mol_link_donate
+		Support( ): $mol_link_support
 		Lights( ): $mol_lights_toggle
 		Info_icon( ): $mol_icon_information_slab_circle_outline
 		Info( ): $mol_link
