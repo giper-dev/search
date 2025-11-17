@@ -34,7 +34,7 @@
 ## Firefox
 
 - Click to url-bar.
-- Click to "Add $gd_search".
+- Click to "Add $giper_search".
 - Click to "Change search settings at right side".
 - Find default search select and change it.
 

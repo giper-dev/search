@@ -71,9 +71,9 @@ $mol_frame $mol_embed_native
 	clipboard_read true
 	clipboard_write true
 
-$gd_web_frame $mol_frame
+$giper_web_frame $mol_frame
 	uri \https://web.giper.dev/#mol_lights={lights}/current={current}/query={query}
-	- uri \http://localhost:9080/gd/web/bar/-/test.html#mol_lights={lights}/current={current}/query={query}
+	- uri \http://localhost:9080/giper/web/bar/-/test.html#mol_lights={lights}/current={current}/query={query}
 	query \
 
 $mol_pop $mol_view
@@ -707,14 +707,14 @@ $mol_form $mol_list
 				<= Result $mol_status
 					message <= result? null
 
-$gd_search_app $mol_book2
+$giper_search_app $mol_book2
 	plugins /
 		<= Theme $mol_theme_auto
 	Placeholder null
 	query_results? \
 	title_suffix @ \Giper Search
 	pages /
-		<= Space $gd_web_frame
+		<= Space $giper_web_frame
 			query <= query
 		<= Main $mol_page
 			title <= query
@@ -783,7 +783,7 @@ $gd_search_app $mol_book2
 					dom_name \script
 					attr *
 						src \https://www.gstatic.com/prose/brand.js
-						targetId \$gd_search_app.Root(0).Attribution()
+						targetId \$giper_search_app.Root(0).Attribution()
 			foot <= searcher_links /
 		<= Settings $mol_page
 			title @ \Settings

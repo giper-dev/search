@@ -6,7 +6,7 @@
 	<LongName>Giper Search</LongName>
 	<Description>Web search with blacklist and without ads</Description>
 	<InputEncoding>UTF-8</InputEncoding>
-	<Image width="16" height="16" type="image/svg+xml">../../../gd/search/logo/logo.svg</Image>
+	<Image width="16" height="16" type="image/svg+xml">../../../giper/search/logo/logo.svg</Image>
 	<Url type="text/html" template="https://search.giper.dev/#!query={searchTerms}" />
 	<Url type="application/x-suggestions+json" template="https://suggest.yandex.ru/suggest-ff.cgi?part={searchTerms}"/>
 	<Query role="example" searchTerms="$mol" />

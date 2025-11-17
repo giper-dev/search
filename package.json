@@ -1,5 +1,5 @@
 {
-  "name": "gd_search_app",
+  "name": "giper_search_app",
   "version": "0.0.1",
   "exports": {
     "node": {
@@ -15,9 +15,9 @@
   "browser": "./web.js",
   "types": "./web.d.ts",
   "keywords": [
-    "$gd_search_app",
-    "$gd_search",
-    "$gd",
+    "$giper_search_app",
+    "$giper_search",
+    "$giper",
     "$mol_book2",
     "$mol",
     "$mol_scroll",
@@ -150,8 +150,8 @@
     "$mol_layer",
     "$mol_type_enforce",
     "$mol_theme_auto",
-    "$gd_web_frame",
-    "$gd_web",
+    "$giper_web_frame",
+    "$giper_web",
     "$mol_frame",
     "$mol_embed_native",
     "$mol_embed",
@@ -245,7 +245,7 @@
     "$mol_icon_book_open",
     "$mol_icon_book",
     "$mol_link_iconed",
-    "$gd_search_api",
+    "$giper_search_api",
     "$mol_data_record",
     "$mol_data",
     "$mol_data_value",

@@ -5661,7 +5661,7 @@ var $;
 })($ || ($ = {}));
 
 ;
-	($.$gd_web_frame) = class $gd_web_frame extends ($.$mol_frame) {
+	($.$giper_web_frame) = class $giper_web_frame extends ($.$mol_frame) {
 		uri(){
 			return "https://web.giper.dev/#mol_lights={lights}/current={current}/query={query}";
 		}
@@ -5680,7 +5680,7 @@ var $;
 (function ($) {
     var $$;
     (function ($$) {
-        class $gd_web_frame extends $.$gd_web_frame {
+        class $giper_web_frame extends $.$giper_web_frame {
             uri() {
                 return super.uri()
                     .replace('{lights}', String(this.$.$mol_lights()))
@@ -5690,8 +5690,8 @@ var $;
         }
         __decorate([
             $mol_mem
-        ], $gd_web_frame.prototype, "uri", null);
-        $$.$gd_web_frame = $gd_web_frame;
+        ], $giper_web_frame.prototype, "uri", null);
+        $$.$giper_web_frame = $giper_web_frame;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
 
@@ -5699,7 +5699,7 @@ var $;
 "use strict";
 var $;
 (function ($) {
-    $mol_style_attach("gd/web/frame/frame.view.css", "/* @keyframes gd_web_frame_show {\n\tfrom {\n\t\topacity: 0;\n\t}\n}\n\n[gd_web_frame] {\n\tanimation: 5s -1s ease-in gd_web_frame_show;\n} */\n");
+    $mol_style_attach("giper/web/frame/frame.view.css", "/* @keyframes giper_web_frame_show {\n\tfrom {\n\t\topacity: 0;\n\t}\n}\n\n[giper_web_frame] {\n\tanimation: 5s -1s ease-in giper_web_frame_show;\n} */\n");
 })($ || ($ = {}));
 
 ;
@@ -5708,7 +5708,7 @@ var $;
 (function ($) {
     var $$;
     (function ($$) {
-        $mol_style_define($gd_web_frame, {
+        $mol_style_define($giper_web_frame, {
             flex: {
                 basis: '4rem',
                 shrink: 0,
@@ -10581,13 +10581,13 @@ var $;
 })($ || ($ = {}));
 
 ;
-	($.$gd_search_app) = class $gd_search_app extends ($.$mol_book2) {
+	($.$giper_search_app) = class $giper_search_app extends ($.$mol_book2) {
 		Theme(){
 			const obj = new this.$.$mol_theme_auto();
 			return obj;
 		}
 		Space(){
-			const obj = new this.$.$gd_web_frame();
+			const obj = new this.$.$giper_web_frame();
 			(obj.query) = () => ((this.query()));
 			return obj;
 		}
@@ -10604,7 +10604,7 @@ var $;
 		}
 		Query(){
 			const obj = new this.$.$mol_search();
-			(obj.hint) = () => ((this.$.$mol_locale.text("$gd_search_app_Query_hint")));
+			(obj.hint) = () => ((this.$.$mol_locale.text("$giper_search_app_Query_hint")));
 			(obj.query) = (next) => ((this.query(next)));
 			(obj.submit) = (next) => ((this.submit(next)));
 			return obj;
@@ -10628,7 +10628,7 @@ var $;
 			(obj.value) = (next) => ((this.exclude(next)));
 			(obj.options) = () => ((this.exclude_options()));
 			(obj.badge_title) = (id) => ((this.exclude_badge_title(id)));
-			(obj.pick_hint) = () => ((this.$.$mol_locale.text("$gd_search_app_Exclude_pick_hint")));
+			(obj.pick_hint) = () => ((this.$.$mol_locale.text("$giper_search_app_Exclude_pick_hint")));
 			(obj.pick_enabled) = () => (true);
 			(obj.Pick_icon) = () => ((this.Exclude_icon()));
 			return obj;
@@ -10645,7 +10645,7 @@ var $;
 			const obj = new this.$.$mol_check_icon();
 			(obj.checked) = (next) => ((this.exact(next)));
 			(obj.Icon) = () => ((this.Exact_icon()));
-			(obj.hint) = () => ((this.$.$mol_locale.text("$gd_search_app_Exact_hint")));
+			(obj.hint) = () => ((this.$.$mol_locale.text("$giper_search_app_Exact_hint")));
 			return obj;
 		}
 		where(next){
@@ -10657,11 +10657,11 @@ var $;
 			(obj.value) = (next) => ((this.where(next)));
 			(obj.Filter) = () => (null);
 			(obj.dictionary) = () => ({
-				"anywhere": (this.$.$mol_locale.text("$gd_search_app_Where_dictionary_anywhere")), 
-				"allintitle": (this.$.$mol_locale.text("$gd_search_app_Where_dictionary_allintitle")), 
-				"allintext": (this.$.$mol_locale.text("$gd_search_app_Where_dictionary_allintext")), 
-				"allinurl": (this.$.$mol_locale.text("$gd_search_app_Where_dictionary_allinurl")), 
-				"allinanchor": (this.$.$mol_locale.text("$gd_search_app_Where_dictionary_allinanchor"))
+				"anywhere": (this.$.$mol_locale.text("$giper_search_app_Where_dictionary_anywhere")), 
+				"allintitle": (this.$.$mol_locale.text("$giper_search_app_Where_dictionary_allintitle")), 
+				"allintext": (this.$.$mol_locale.text("$giper_search_app_Where_dictionary_allintext")), 
+				"allinurl": (this.$.$mol_locale.text("$giper_search_app_Where_dictionary_allinurl")), 
+				"allinanchor": (this.$.$mol_locale.text("$giper_search_app_Where_dictionary_allinanchor"))
 			});
 			return obj;
 		}
@@ -10715,7 +10715,7 @@ var $;
 			return [];
 		}
 		result_list_empty(){
-			return (this.$.$mol_locale.text("$gd_search_app_result_list_empty"));
+			return (this.$.$mol_locale.text("$giper_search_app_result_list_empty"));
 		}
 		Result_list_empty(){
 			const obj = new this.$.$mol_view();
@@ -10737,7 +10737,7 @@ var $;
 		Attribution_loader(){
 			const obj = new this.$.$mol_view();
 			(obj.dom_name) = () => ("script");
-			(obj.attr) = () => ({"src": "https://www.gstatic.com/prose/brand.js", "targetId": "$gd_search_app.Root(0).Attribution()"});
+			(obj.attr) = () => ({"src": "https://www.gstatic.com/prose/brand.js", "targetId": "$giper_search_app.Root(0).Attribution()"});
 			return obj;
 		}
 		main_content(){
@@ -10792,7 +10792,7 @@ var $;
 		}
 		Info(){
 			const obj = new this.$.$mol_link();
-			(obj.hint) = () => ((this.$.$mol_locale.text("$gd_search_app_Info_hint")));
+			(obj.hint) = () => ((this.$.$mol_locale.text("$giper_search_app_Info_hint")));
 			(obj.uri) = () => ("https://page.hyoo.ru/#!=o9jnhf_7v21c4");
 			(obj.sub) = () => ([(this.Info_icon())]);
 			return obj;
@@ -10818,13 +10818,13 @@ var $;
 		}
 		Searchers(){
 			const obj = new this.$.$mol_textarea();
-			(obj.hint) = () => ((this.$.$mol_locale.text("$gd_search_app_Searchers_hint")));
+			(obj.hint) = () => ((this.$.$mol_locale.text("$giper_search_app_Searchers_hint")));
 			(obj.value) = (next) => ((this.searchers(next)));
 			return obj;
 		}
 		Searchers_field(){
 			const obj = new this.$.$mol_form_field();
-			(obj.name) = () => ((this.$.$mol_locale.text("$gd_search_app_Searchers_field_name")));
+			(obj.name) = () => ((this.$.$mol_locale.text("$giper_search_app_Searchers_field_name")));
 			(obj.Content) = () => ((this.Searchers()));
 			return obj;
 		}
@@ -10834,13 +10834,13 @@ var $;
 		}
 		Blacklist(){
 			const obj = new this.$.$mol_textarea();
-			(obj.hint) = () => ((this.$.$mol_locale.text("$gd_search_app_Blacklist_hint")));
+			(obj.hint) = () => ((this.$.$mol_locale.text("$giper_search_app_Blacklist_hint")));
 			(obj.value) = (next) => ((this.blacklist(next)));
 			return obj;
 		}
 		Blacklist_field(){
 			const obj = new this.$.$mol_form_field();
-			(obj.name) = () => ((this.$.$mol_locale.text("$gd_search_app_Blacklist_field_name")));
+			(obj.name) = () => ((this.$.$mol_locale.text("$giper_search_app_Blacklist_field_name")));
 			(obj.Content) = () => ((this.Blacklist()));
 			return obj;
 		}
@@ -10854,7 +10854,7 @@ var $;
 		}
 		Query_dump_field(){
 			const obj = new this.$.$mol_form_field();
-			(obj.name) = () => ((this.$.$mol_locale.text("$gd_search_app_Query_dump_field_name")));
+			(obj.name) = () => ((this.$.$mol_locale.text("$giper_search_app_Query_dump_field_name")));
 			(obj.Content) = () => ((this.Query_dump()));
 			return obj;
 		}
@@ -10869,7 +10869,7 @@ var $;
 		}
 		Settings(){
 			const obj = new this.$.$mol_page();
-			(obj.title) = () => ((this.$.$mol_locale.text("$gd_search_app_Settings_title")));
+			(obj.title) = () => ((this.$.$mol_locale.text("$giper_search_app_Settings_title")));
 			(obj.tools) = () => ([
 				(this.Donate()), 
 				(this.Support()), 
@@ -10888,7 +10888,7 @@ var $;
 		Sideview_archived(id){
 			const obj = new this.$.$mol_link();
 			(obj.arg) = () => ({"archived": ""});
-			(obj.hint) = () => ((this.$.$mol_locale.text("$gd_search_app_Sideview_archived_hint")));
+			(obj.hint) = () => ((this.$.$mol_locale.text("$giper_search_app_Sideview_archived_hint")));
 			(obj.sub) = () => ([(this.Sideview_archived_icon(id))]);
 			return obj;
 		}
@@ -10904,7 +10904,7 @@ var $;
 		}
 		Sideview_hint(){
 			const obj = new this.$.$mol_paragraph();
-			(obj.title) = () => ((this.$.$mol_locale.text("$gd_search_app_Sideview_hint_title")));
+			(obj.title) = () => ((this.$.$mol_locale.text("$giper_search_app_Sideview_hint_title")));
 			return obj;
 		}
 		sideview(next){
@@ -10987,7 +10987,7 @@ var $;
 		Result_ban(id){
 			const obj = new this.$.$mol_select();
 			(obj.Trigger_icon) = () => ((this.Result_ban_icon(id)));
-			(obj.hint) = () => ((this.$.$mol_locale.text("$gd_search_app_Result_ban_hint")));
+			(obj.hint) = () => ((this.$.$mol_locale.text("$giper_search_app_Result_ban_hint")));
 			(obj.Filter) = () => (null);
 			(obj.align_hor) = () => ("left");
 			(obj.options) = () => ((this.result_ban_options(id)));
@@ -11004,7 +11004,7 @@ var $;
 		Result_archived(id){
 			const obj = new this.$.$mol_link();
 			(obj.uri) = () => ((this.result_archived(id)));
-			(obj.hint) = () => ((this.$.$mol_locale.text("$gd_search_app_Result_archived_hint")));
+			(obj.hint) = () => ((this.$.$mol_locale.text("$giper_search_app_Result_archived_hint")));
 			(obj.sub) = () => ([(this.Result_archived_icon(id))]);
 			return obj;
 		}
@@ -11018,7 +11018,7 @@ var $;
 		Result_open(id){
 			const obj = new this.$.$mol_link();
 			(obj.arg) = () => ({"settings": null, "sideview": (this.result_embed(id))});
-			(obj.hint) = () => ((this.$.$mol_locale.text("$gd_search_app_Result_open_hint")));
+			(obj.hint) = () => ((this.$.$mol_locale.text("$giper_search_app_Result_open_hint")));
 			(obj.sub) = () => ([(this.Result_open_icon(id))]);
 			return obj;
 		}
@@ -11045,7 +11045,7 @@ var $;
 			return "";
 		}
 		title_suffix(){
-			return (this.$.$mol_locale.text("$gd_search_app_title_suffix"));
+			return (this.$.$mol_locale.text("$giper_search_app_title_suffix"));
 		}
 		pages(){
 			return [
@@ -11056,7 +11056,7 @@ var $;
 		}
 		Sideview(id){
 			const obj = new this.$.$mol_page();
-			(obj.title) = () => ((this.$.$mol_locale.text("$gd_search_app_Sideview_title")));
+			(obj.title) = () => ((this.$.$mol_locale.text("$giper_search_app_Sideview_title")));
 			(obj.tools) = () => ([(this.Sideview_archived(id)), (this.Sideview_close())]);
 			(obj.body_content) = () => ([(this.Sideview_hint()), (this.Sideview_embed(id))]);
 			return obj;
@@ -11074,73 +11074,73 @@ var $;
 			return obj;
 		}
 	};
-	($mol_mem(($.$gd_search_app.prototype), "Theme"));
-	($mol_mem(($.$gd_search_app.prototype), "Space"));
-	($mol_mem(($.$gd_search_app.prototype), "query"));
-	($mol_mem(($.$gd_search_app.prototype), "submit"));
-	($mol_mem(($.$gd_search_app.prototype), "Query"));
-	($mol_mem(($.$gd_search_app.prototype), "exclude"));
-	($mol_mem(($.$gd_search_app.prototype), "Exclude_icon"));
-	($mol_mem(($.$gd_search_app.prototype), "Exclude"));
-	($mol_mem(($.$gd_search_app.prototype), "exact"));
-	($mol_mem(($.$gd_search_app.prototype), "Exact_icon"));
-	($mol_mem(($.$gd_search_app.prototype), "Exact"));
-	($mol_mem(($.$gd_search_app.prototype), "where"));
-	($mol_mem(($.$gd_search_app.prototype), "Where"));
-	($mol_mem(($.$gd_search_app.prototype), "type"));
-	($mol_mem(($.$gd_search_app.prototype), "Type"));
-	($mol_mem(($.$gd_search_app.prototype), "Settings_open_icon"));
-	($mol_mem(($.$gd_search_app.prototype), "Settings_open"));
-	($mol_mem(($.$gd_search_app.prototype), "Error"));
-	($mol_mem(($.$gd_search_app.prototype), "Result_list_empty"));
-	($mol_mem(($.$gd_search_app.prototype), "Result_list"));
-	($mol_mem(($.$gd_search_app.prototype), "Attribution"));
-	($mol_mem(($.$gd_search_app.prototype), "Attribution_loader"));
-	($mol_mem(($.$gd_search_app.prototype), "Content"));
-	($mol_mem(($.$gd_search_app.prototype), "Main"));
-	($mol_mem(($.$gd_search_app.prototype), "Donate"));
-	($mol_mem(($.$gd_search_app.prototype), "Support"));
-	($mol_mem(($.$gd_search_app.prototype), "Lights"));
-	($mol_mem(($.$gd_search_app.prototype), "Info_icon"));
-	($mol_mem(($.$gd_search_app.prototype), "Info"));
-	($mol_mem(($.$gd_search_app.prototype), "Sources"));
-	($mol_mem(($.$gd_search_app.prototype), "Settings_close_icon"));
-	($mol_mem(($.$gd_search_app.prototype), "Settings_close"));
-	($mol_mem(($.$gd_search_app.prototype), "searchers"));
-	($mol_mem(($.$gd_search_app.prototype), "Searchers"));
-	($mol_mem(($.$gd_search_app.prototype), "Searchers_field"));
-	($mol_mem(($.$gd_search_app.prototype), "blacklist"));
-	($mol_mem(($.$gd_search_app.prototype), "Blacklist"));
-	($mol_mem(($.$gd_search_app.prototype), "Blacklist_field"));
-	($mol_mem(($.$gd_search_app.prototype), "Query_dump"));
-	($mol_mem(($.$gd_search_app.prototype), "Query_dump_field"));
-	($mol_mem(($.$gd_search_app.prototype), "Settings_fields"));
-	($mol_mem(($.$gd_search_app.prototype), "Settings"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Sideview_archived_icon"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Sideview_archived"));
-	($mol_mem(($.$gd_search_app.prototype), "Sideview_close_icon"));
-	($mol_mem(($.$gd_search_app.prototype), "Sideview_close"));
-	($mol_mem(($.$gd_search_app.prototype), "Sideview_hint"));
-	($mol_mem(($.$gd_search_app.prototype), "sideview"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Sideview_embed"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Result_image"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Result_title"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Result_host"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Result_descr"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Result_main"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Result_info"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Result_ban_icon"));
-	($mol_mem_key(($.$gd_search_app.prototype), "result_ban"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Result_ban"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Result_archived_icon"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Result_archived"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Result_open_icon"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Result_open"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Result_tools"));
-	($mol_mem(($.$gd_search_app.prototype), "query_results"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Sideview"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Result_item"));
-	($mol_mem_key(($.$gd_search_app.prototype), "Searcher_link"));
+	($mol_mem(($.$giper_search_app.prototype), "Theme"));
+	($mol_mem(($.$giper_search_app.prototype), "Space"));
+	($mol_mem(($.$giper_search_app.prototype), "query"));
+	($mol_mem(($.$giper_search_app.prototype), "submit"));
+	($mol_mem(($.$giper_search_app.prototype), "Query"));
+	($mol_mem(($.$giper_search_app.prototype), "exclude"));
+	($mol_mem(($.$giper_search_app.prototype), "Exclude_icon"));
+	($mol_mem(($.$giper_search_app.prototype), "Exclude"));
+	($mol_mem(($.$giper_search_app.prototype), "exact"));
+	($mol_mem(($.$giper_search_app.prototype), "Exact_icon"));
+	($mol_mem(($.$giper_search_app.prototype), "Exact"));
+	($mol_mem(($.$giper_search_app.prototype), "where"));
+	($mol_mem(($.$giper_search_app.prototype), "Where"));
+	($mol_mem(($.$giper_search_app.prototype), "type"));
+	($mol_mem(($.$giper_search_app.prototype), "Type"));
+	($mol_mem(($.$giper_search_app.prototype), "Settings_open_icon"));
+	($mol_mem(($.$giper_search_app.prototype), "Settings_open"));
+	($mol_mem(($.$giper_search_app.prototype), "Error"));
+	($mol_mem(($.$giper_search_app.prototype), "Result_list_empty"));
+	($mol_mem(($.$giper_search_app.prototype), "Result_list"));
+	($mol_mem(($.$giper_search_app.prototype), "Attribution"));
+	($mol_mem(($.$giper_search_app.prototype), "Attribution_loader"));
+	($mol_mem(($.$giper_search_app.prototype), "Content"));
+	($mol_mem(($.$giper_search_app.prototype), "Main"));
+	($mol_mem(($.$giper_search_app.prototype), "Donate"));
+	($mol_mem(($.$giper_search_app.prototype), "Support"));
+	($mol_mem(($.$giper_search_app.prototype), "Lights"));
+	($mol_mem(($.$giper_search_app.prototype), "Info_icon"));
+	($mol_mem(($.$giper_search_app.prototype), "Info"));
+	($mol_mem(($.$giper_search_app.prototype), "Sources"));
+	($mol_mem(($.$giper_search_app.prototype), "Settings_close_icon"));
+	($mol_mem(($.$giper_search_app.prototype), "Settings_close"));
+	($mol_mem(($.$giper_search_app.prototype), "searchers"));
+	($mol_mem(($.$giper_search_app.prototype), "Searchers"));
+	($mol_mem(($.$giper_search_app.prototype), "Searchers_field"));
+	($mol_mem(($.$giper_search_app.prototype), "blacklist"));
+	($mol_mem(($.$giper_search_app.prototype), "Blacklist"));
+	($mol_mem(($.$giper_search_app.prototype), "Blacklist_field"));
+	($mol_mem(($.$giper_search_app.prototype), "Query_dump"));
+	($mol_mem(($.$giper_search_app.prototype), "Query_dump_field"));
+	($mol_mem(($.$giper_search_app.prototype), "Settings_fields"));
+	($mol_mem(($.$giper_search_app.prototype), "Settings"));
+	($mol_mem_key(($.$giper_search_app.prototype), "Sideview_archived_icon"));
+	($mol_mem_key(($.$giper_search_app.prototype), "Sideview_archived"));
+	($mol_mem(($.$giper_search_app.prototype), "Sideview_close_icon"));
+	($mol_mem(($.$giper_search_app.prototype), "Sideview_close"));
+	($mol_mem(($.$giper_search_app.prototype), "Sideview_hint"));
+	($mol_mem(($.$giper_search_app.prototype), "sideview"));
+	($mol_mem_key(($.$giper_search_app.prototype), "Sideview_embed"));
+	($mol_mem_key(($.$giper_search_app.prototype), "Result_image"));
+	($mol_mem_key(($.$giper_search_app.prototype), "Result_title"));
+	($mol_mem_key(($.$giper_search_app.prototype), "Result_host"));
+	($mol_mem_key(($.$giper_search_app.prototype), "Result_descr"));
+	($mol_mem_key(($.$giper_search_app.prototype), "Result_main"));
+	($mol_mem_key(($.$giper_search_app.prototype), "Result_info"));
+	($mol_mem_key(($.$giper_search_app.prototype), "Result_ban_icon"));
+	($mol_mem_key(($.$giper_search_app.prototype), "result_ban"));
+	($mol_mem_key(($.$giper_search_app.prototype), "Result_ban"));
+	($mol_mem_key(($.$giper_search_app.prototype), "Result_archived_icon"));
+	($mol_mem_key(($.$giper_search_app.prototype), "Result_archived"));
+	($mol_mem_key(($.$giper_search_app.prototype), "Result_open_icon"));
+	($mol_mem_key(($.$giper_search_app.prototype), "Result_open"));
+	($mol_mem_key(($.$giper_search_app.prototype), "Result_tools"));
+	($mol_mem(($.$giper_search_app.prototype), "query_results"));
+	($mol_mem_key(($.$giper_search_app.prototype), "Sideview"));
+	($mol_mem_key(($.$giper_search_app.prototype), "Result_item"));
+	($mol_mem_key(($.$giper_search_app.prototype), "Searcher_link"));
 
 
 ;
@@ -11349,7 +11349,7 @@ var $;
         contextUrl: $mol_data_optional($mol_data_string),
         visibleUrl: $mol_data_string,
     }));
-    class $gd_search_api extends $mol_object2 {
+    class $giper_search_api extends $mol_object2 {
         static type(type) {
             $mol_wire_solid();
             const api = new this;
@@ -11365,7 +11365,7 @@ var $;
             const ready = (type) => (gname, query, promos, results, div) => {
                 if (results.length && !Object.keys(results[0]).length)
                     results = [];
-                const future = $gd_search_api.type(type).future(query);
+                const future = $giper_search_api.type(type).future(query);
                 try {
                     future.promise.done(Results(results));
                 }
@@ -11384,7 +11384,7 @@ var $;
                                     const error = args[0].error;
                                     if (error) {
                                         setTimeout(() => {
-                                            $gd_search_api.error($gd_search_api.output().querySelector('#recaptcha-wrapper'));
+                                            $giper_search_api.error($giper_search_api.output().querySelector('#recaptcha-wrapper'));
                                         });
                                     }
                                     return sce[field](...args);
@@ -11411,10 +11411,10 @@ var $;
             return next;
         }
         async backend() {
-            const backend = await $gd_search_api.backend();
+            const backend = await $giper_search_api.backend();
             const gname = this.toString();
             backend.render({
-                div: $gd_search_api.output(),
+                div: $giper_search_api.output(),
                 tag: 'search',
                 gname,
                 attributes: {
@@ -11446,26 +11446,26 @@ var $;
     }
     __decorate([
         $mol_memo.method
-    ], $gd_search_api.prototype, "backend", null);
+    ], $giper_search_api.prototype, "backend", null);
     __decorate([
         $mol_mem_key
-    ], $gd_search_api.prototype, "future", null);
+    ], $giper_search_api.prototype, "future", null);
     __decorate([
         $mol_mem_key
-    ], $gd_search_api.prototype, "execute", null);
+    ], $giper_search_api.prototype, "execute", null);
     __decorate([
         $mol_mem_key
-    ], $gd_search_api, "type", null);
+    ], $giper_search_api, "type", null);
     __decorate([
         $mol_memo.method
-    ], $gd_search_api, "backend", null);
+    ], $giper_search_api, "backend", null);
     __decorate([
         $mol_mem
-    ], $gd_search_api, "output", null);
+    ], $giper_search_api, "output", null);
     __decorate([
         $mol_mem
-    ], $gd_search_api, "error", null);
-    $.$gd_search_api = $gd_search_api;
+    ], $giper_search_api, "error", null);
+    $.$giper_search_api = $giper_search_api;
 })($ || ($ = {}));
 
 ;
@@ -11498,7 +11498,7 @@ var $;
     var $$;
     (function ($$) {
         const Words = $mol_regexp.repeat_greedy($mol_regexp.unicode_only('Alphabetic'), 1);
-        class $gd_search_app extends $.$gd_search_app {
+        class $giper_search_app extends $.$giper_search_app {
             get $() {
                 const Base = super.$.$mol_state_arg;
                 return super.$.$mol_ambient({
@@ -11600,7 +11600,7 @@ var $;
                 return super.main_content();
             }
             error() {
-                return this.$.$gd_search_api.error();
+                return this.$.$giper_search_api.error();
             }
             api() {
                 const type = [
@@ -11614,7 +11614,7 @@ var $;
                     'RAW',
                     'Image'
                 ].includes(this.type()) ? 'image' : 'web';
-                return $mol_wire_sync(this.$.$gd_search_api.type(type));
+                return $mol_wire_sync(this.$.$giper_search_api.type(type));
             }
             results_raw() {
                 return this.api().execute(this.query_backend());
@@ -11730,113 +11730,113 @@ var $;
         }
         __decorate([
             $mol_memo.field
-        ], $gd_search_app.prototype, "$", null);
+        ], $giper_search_app.prototype, "$", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "sideview", null);
+        ], $giper_search_app.prototype, "sideview", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "exact", null);
+        ], $giper_search_app.prototype, "exact", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "exclude", null);
+        ], $giper_search_app.prototype, "exclude", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "query_backend", null);
+        ], $giper_search_app.prototype, "query_backend", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "query_forbidden", null);
+        ], $giper_search_app.prototype, "query_forbidden", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "query_type", null);
+        ], $giper_search_app.prototype, "query_type", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "query_where", null);
+        ], $giper_search_app.prototype, "query_where", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "query_exclude", null);
+        ], $giper_search_app.prototype, "query_exclude", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "query_dump", null);
+        ], $giper_search_app.prototype, "query_dump", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "settings", null);
+        ], $giper_search_app.prototype, "settings", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "pages", null);
+        ], $giper_search_app.prototype, "pages", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "title", null);
+        ], $giper_search_app.prototype, "title", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "main_content", null);
+        ], $giper_search_app.prototype, "main_content", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "error", null);
+        ], $giper_search_app.prototype, "error", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "api", null);
+        ], $giper_search_app.prototype, "api", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "results_raw", null);
+        ], $giper_search_app.prototype, "results_raw", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "query_results", null);
+        ], $giper_search_app.prototype, "query_results", null);
         __decorate([
             $mol_action
-        ], $gd_search_app.prototype, "submit", null);
+        ], $giper_search_app.prototype, "submit", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "result_list", null);
+        ], $giper_search_app.prototype, "result_list", null);
         __decorate([
             $mol_mem_key
-        ], $gd_search_app.prototype, "result_image", null);
+        ], $giper_search_app.prototype, "result_image", null);
         __decorate([
             $mol_mem_key
-        ], $gd_search_app.prototype, "result_icon", null);
+        ], $giper_search_app.prototype, "result_icon", null);
         __decorate([
             $mol_mem_key
-        ], $gd_search_app.prototype, "result_main", null);
+        ], $giper_search_app.prototype, "result_main", null);
         __decorate([
             $mol_mem_key
-        ], $gd_search_app.prototype, "result_title", null);
+        ], $giper_search_app.prototype, "result_title", null);
         __decorate([
             $mol_mem_key
-        ], $gd_search_app.prototype, "result_descr", null);
+        ], $giper_search_app.prototype, "result_descr", null);
         __decorate([
             $mol_mem_key
-        ], $gd_search_app.prototype, "result_archived", null);
+        ], $giper_search_app.prototype, "result_archived", null);
         __decorate([
             $mol_mem_key
-        ], $gd_search_app.prototype, "result_words", null);
+        ], $giper_search_app.prototype, "result_words", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "words", null);
+        ], $giper_search_app.prototype, "words", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "exclude_options", null);
+        ], $giper_search_app.prototype, "exclude_options", null);
         __decorate([
             $mol_mem_key
-        ], $gd_search_app.prototype, "result_ban_options", null);
+        ], $giper_search_app.prototype, "result_ban_options", null);
         __decorate([
             $mol_mem_key
-        ], $gd_search_app.prototype, "result_uri", null);
+        ], $giper_search_app.prototype, "result_uri", null);
         __decorate([
             $mol_mem_key
-        ], $gd_search_app.prototype, "result_embed", null);
+        ], $giper_search_app.prototype, "result_embed", null);
         __decorate([
             $mol_mem_key
-        ], $gd_search_app.prototype, "result_uri_view", null);
+        ], $giper_search_app.prototype, "result_uri_view", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "searcher_list", null);
+        ], $giper_search_app.prototype, "searcher_list", null);
         __decorate([
             $mol_mem
-        ], $gd_search_app.prototype, "searcher_links", null);
+        ], $giper_search_app.prototype, "searcher_links", null);
         __decorate([
             $mol_mem_key
-        ], $gd_search_app.prototype, "searcher_link", null);
-        $$.$gd_search_app = $gd_search_app;
+        ], $giper_search_app.prototype, "searcher_link", null);
+        $$.$giper_search_app = $giper_search_app;
     })($$ = $.$$ || ($.$$ = {}));
 })($ || ($ = {}));
 
@@ -11844,7 +11844,7 @@ var $;
 "use strict";
 var $;
 (function ($) {
-    $mol_style_attach("gd/search/app/app.view.css", "#recaptcha\\-wrapper {\n\tmargin: var(--mol_gap_block) !important;\n}\n\n#recaptcha\\-wrapper a,\n#recaptcha\\-wrapper .gs\\-captcha\\-info\\-link {\n\ttext-decoration: none;\n\tcolor: var(--mol_theme_control);\n}\n\n[gd_search_app_main] {\n\tflex: 0 0 60rem;\n\tmargin: 0 auto;\n}\n\n[gd_search_app_main_foot] {\n\tjustify-content: space-evenly;\n}\n\n[gd_search_app_sideview] {\n\tflex: 10000 0 40rem;\n}\n\n[gd_search_app_content] {\n\tflex-direction: column;\n\tpadding: var(--mol_gap_block);\n}\n\n[gd_search_app_sideview_hint] {\n\tflex: 1 1 auto;\n\tpadding: 0 .25rem;\n\tfont-size: .75rem;\n\tjustify-content: center;\n}\n\n[gd_search_app_sideview_embed] {\n\talign-self: stretch;\n\tjustify-self: stretch;\n\tborder-radius: 0;\n\tbackground: transparent;\n}\n\n[gd_search_app_settings] {\n\tflex: 0 0 25rem;\n}\n\n[gd_search_app_result_item] {\n\tpadding: 0;\n\tbackground: var(--mol_theme_card);\n}\n\n[gd_search_app_result_image] {\n\tflex: 1 0 6rem;\n\tmax-height: 6rem;\n\tobject-fit: scale-down;\n}\n\n[gd_search_app_result_info] {\n\tflex: 1 1 auto;\n\tflex-wrap: wrap;\n\talign-items: center;\n\talign-content: center;\n}\n\n[gd_search_app_result_main] {\n\tflex: 10000 1 14rem;\n}\n\n[gd_search_app_result_title] {\n\tcolor: var(--mol_theme_text);\n\ttext-shadow: 0 0;\n}\n\n[gd_search_app_result_descr] {\n\tcolor: var(--mol_theme_text);\n}\n\n[gd_search_app_main_tools] {\n\tflex-grow: 0;\n}\n\n[gd_search_app_result_title_low] {\n\topacity: 1;\n}\n\n[gd_search_app_result_descr_low] {\n\topacity: 1;\n}\n\n[gd_search_app_result_host_low] {\n\topacity: 1;\n}\n\n[gd_search_app_result_list] {\n\tgap: var(--mol_gap_block);\n}\n\n[gd_search_app_result_list_empty] {\n\tpadding: var(--mol_gap_text);\n}\n\n[gd_search_app_attribution] {\n\tpadding: var(--mol_gap_text);\n}\n\n[gd_search_app_result_ban_option_label] {\n\ttext-align: right;\n}\n");
+    $mol_style_attach("giper/search/app/app.view.css", "#recaptcha\\-wrapper {\n\tmargin: var(--mol_gap_block) !important;\n}\n\n#recaptcha\\-wrapper a,\n#recaptcha\\-wrapper .gs\\-captcha\\-info\\-link {\n\ttext-decoration: none;\n\tcolor: var(--mol_theme_control);\n}\n\n[giper_search_app_main] {\n\tflex: 0 0 60rem;\n\tmargin: 0 auto;\n}\n\n[giper_search_app_main_foot] {\n\tjustify-content: space-evenly;\n}\n\n[giper_search_app_sideview] {\n\tflex: 10000 0 40rem;\n}\n\n[giper_search_app_content] {\n\tflex-direction: column;\n\tpadding: var(--mol_gap_block);\n}\n\n[giper_search_app_sideview_hint] {\n\tflex: 1 1 auto;\n\tpadding: 0 .25rem;\n\tfont-size: .75rem;\n\tjustify-content: center;\n}\n\n[giper_search_app_sideview_embed] {\n\talign-self: stretch;\n\tjustify-self: stretch;\n\tborder-radius: 0;\n\tbackground: transparent;\n}\n\n[giper_search_app_settings] {\n\tflex: 0 0 25rem;\n}\n\n[giper_search_app_result_item] {\n\tpadding: 0;\n\tbackground: var(--mol_theme_card);\n}\n\n[giper_search_app_result_image] {\n\tflex: 1 0 6rem;\n\tmax-height: 6rem;\n\tobject-fit: scale-down;\n}\n\n[giper_search_app_result_info] {\n\tflex: 1 1 auto;\n\tflex-wrap: wrap;\n\talign-items: center;\n\talign-content: center;\n}\n\n[giper_search_app_result_main] {\n\tflex: 10000 1 14rem;\n}\n\n[giper_search_app_result_title] {\n\tcolor: var(--mol_theme_text);\n\ttext-shadow: 0 0;\n}\n\n[giper_search_app_result_descr] {\n\tcolor: var(--mol_theme_text);\n}\n\n[giper_search_app_main_tools] {\n\tflex-grow: 0;\n}\n\n[giper_search_app_result_title_low] {\n\topacity: 1;\n}\n\n[giper_search_app_result_descr_low] {\n\topacity: 1;\n}\n\n[giper_search_app_result_host_low] {\n\topacity: 1;\n}\n\n[giper_search_app_result_list] {\n\tgap: var(--mol_gap_block);\n}\n\n[giper_search_app_result_list_empty] {\n\tpadding: var(--mol_gap_text);\n}\n\n[giper_search_app_attribution] {\n\tpadding: var(--mol_gap_text);\n}\n\n[giper_search_app_result_ban_option_label] {\n\ttext-align: right;\n}\n");
 })($ || ($ = {}));
 
 ;
