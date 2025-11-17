@@ -2,7 +2,7 @@ namespace $.$$ {
 	
 	const Words = $mol_regexp.repeat_greedy( $mol_regexp.unicode_only( 'Alphabetic' ), 1 )
 	
-	export class $gd_search_app extends $.$gd_search_app {
+	export class $giper_search_app extends $.$giper_search_app {
 		
 		@ $mol_memo.field
 		get $() {
@@ -142,7 +142,7 @@ namespace $.$$ {
 		
 		@ $mol_mem
 		error() {
-			return this.$.$gd_search_api.error()
+			return this.$.$giper_search_api.error()
 		}
 		
 		@ $mol_mem
@@ -160,7 +160,7 @@ namespace $.$$ {
 				'Image'
 			].includes( this.type() ) ? 'image' : 'web'
 			
-			return $mol_wire_sync( this.$.$gd_search_api.type( type ) )
+			return $mol_wire_sync( this.$.$giper_search_api.type( type ) )
 		
 		}
 		

@@ -8,101 +8,101 @@
 	color: var(--mol_theme_control);
 }
 
-[gd_search_app_main] {
+[giper_search_app_main] {
 	flex: 0 0 60rem;
 	margin: 0 auto;
 }
 
-[gd_search_app_main_foot] {
+[giper_search_app_main_foot] {
 	justify-content: space-evenly;
 }
 
-[gd_search_app_sideview] {
+[giper_search_app_sideview] {
 	flex: 10000 0 40rem;
 }
 
-[gd_search_app_content] {
+[giper_search_app_content] {
 	flex-direction: column;
 	padding: var(--mol_gap_block);
 }
 
-[gd_search_app_sideview_hint] {
+[giper_search_app_sideview_hint] {
 	flex: 1 1 auto;
 	padding: 0 .25rem;
 	font-size: .75rem;
 	justify-content: center;
 }
 
-[gd_search_app_sideview_embed] {
+[giper_search_app_sideview_embed] {
 	align-self: stretch;
 	justify-self: stretch;
 	border-radius: 0;
 	background: transparent;
 }
 
-[gd_search_app_settings] {
+[giper_search_app_settings] {
 	flex: 0 0 25rem;
 }
 
-[gd_search_app_result_item] {
+[giper_search_app_result_item] {
 	padding: 0;
 	background: var(--mol_theme_card);
 }
 
-[gd_search_app_result_image] {
+[giper_search_app_result_image] {
 	flex: 1 0 6rem;
 	max-height: 6rem;
 	object-fit: scale-down;
 }
 
-[gd_search_app_result_info] {
+[giper_search_app_result_info] {
 	flex: 1 1 auto;
 	flex-wrap: wrap;
 	align-items: center;
 	align-content: center;
 }
 
-[gd_search_app_result_main] {
+[giper_search_app_result_main] {
 	flex: 10000 1 14rem;
 }
 
-[gd_search_app_result_title] {
+[giper_search_app_result_title] {
 	color: var(--mol_theme_text);
 	text-shadow: 0 0;
 }
 
-[gd_search_app_result_descr] {
+[giper_search_app_result_descr] {
 	color: var(--mol_theme_text);
 }
 
-[gd_search_app_main_tools] {
+[giper_search_app_main_tools] {
 	flex-grow: 0;
 }
 
-[gd_search_app_result_title_low] {
+[giper_search_app_result_title_low] {
 	opacity: 1;
 }
 
-[gd_search_app_result_descr_low] {
+[giper_search_app_result_descr_low] {
 	opacity: 1;
 }
 
-[gd_search_app_result_host_low] {
+[giper_search_app_result_host_low] {
 	opacity: 1;
 }
 
-[gd_search_app_result_list] {
+[giper_search_app_result_list] {
 	gap: var(--mol_gap_block);
 }
 
-[gd_search_app_result_list_empty] {
+[giper_search_app_result_list_empty] {
 	padding: var(--mol_gap_text);
 }
 
-[gd_search_app_attribution] {
+[giper_search_app_attribution] {
 	padding: var(--mol_gap_text);
 }
 
-[gd_search_app_result_ban_option_label] {
+[giper_search_app_result_ban_option_label] {
 	text-align: right;
 }
