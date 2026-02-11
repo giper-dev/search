@@ -1,0 +1,25 @@
+{
+	"name": "Giper Search",
+	"short_name": "GD Search",
+	"description": "",
+	"id": "giper_search_app",
+	"start_url": "../../..",
+	"display": "fullscreen",
+	"background_color": "#000000",
+	"theme_color": "#000000",
+	"categories": [
+		"game"
+	],
+	"icons": [
+		{
+			"src": "../logo/logo_512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		},
+		{
+			"src": "../logo/logo.svg",
+			"type": "image/svg+xml",
+			"sizes": "386x386"
+		}
+	]
+}
